@@ -100,7 +100,7 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
         RunLoop.current.add(minuteTimer!, forMode: .defaultRunLoopMode)
     }
 
-    func minuteTick() {
+    @objc func minuteTick() {
         cachedCurrentTimeComponents.removeAll()
         invalidateLayout()
     }

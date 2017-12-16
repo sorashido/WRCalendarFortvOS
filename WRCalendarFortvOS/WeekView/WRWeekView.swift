@@ -122,7 +122,7 @@ public class WRWeekView: UIView {
         flowLayout.sectionWidth = (frame.width - flowLayout.rowHeaderWidth) / CGFloat(daysToShowOnScreen)
     }
     
-    func tapHandler(_ recognizer: UITapGestureRecognizer) {
+    @objc func tapHandler(_ recognizer: UITapGestureRecognizer) {
         let point = recognizer.location(in: self)
         
         var components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: getDateForX(point.x))
