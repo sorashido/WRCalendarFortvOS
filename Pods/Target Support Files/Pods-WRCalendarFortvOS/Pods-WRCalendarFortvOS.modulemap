@@ -1,6 +1,0 @@
-framework module Pods_WRCalendarFortvOS {
-  umbrella header "Pods-WRCalendarFortvOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

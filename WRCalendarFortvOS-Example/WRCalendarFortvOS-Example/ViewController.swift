@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Pods_WRCalendarFortvOS_Example
 
 class ViewController: UIViewController {
 

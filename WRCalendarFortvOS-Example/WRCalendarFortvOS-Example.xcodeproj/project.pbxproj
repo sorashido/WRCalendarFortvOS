@@ -7,22 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45F70AFAFE70C7BC24276CD2 /* Pods_WRCalendarFortvOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12AE7A5EF6B82B8B50EF8EF8 /* Pods_WRCalendarFortvOS_Example.framework */; };
 		BFD417AA1FE4B8D400479B30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD417A91FE4B8D400479B30 /* AppDelegate.swift */; };
 		BFD417AC1FE4B8D400479B30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD417AB1FE4B8D400479B30 /* ViewController.swift */; };
 		BFD417AF1FE4B8D400479B30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD417AD1FE4B8D400479B30 /* Main.storyboard */; };
 		BFD417B11FE4B8D400479B30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD417B01FE4B8D400479B30 /* Assets.xcassets */; };
+		DCD85BDD27DABC64866D1992 /* Pods_WRCalendarFortvOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D128342B1DE563394CC9CB19 /* Pods_WRCalendarFortvOS_Example.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BFD418871FE5095C00479B30 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		12AE7A5EF6B82B8B50EF8EF8 /* Pods_WRCalendarFortvOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRCalendarFortvOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD417A61FE4B8D400479B30 /* WRCalendarFortvOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WRCalendarFortvOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD417A91FE4B8D400479B30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD417AB1FE4B8D400479B30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BFD417AE1FE4B8D400479B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFD417B01FE4B8D400479B30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD417B21FE4B8D400479B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD4187D1FE5095C00479B30 /* WRcalendarFortvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRcalendarFortvOS.h; sourceTree = "<group>"; };
+		BFD4187E1FE5095C00479B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8958E662461F955DE37582B /* Pods-WRCalendarFortvOS-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRCalendarFortvOS-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D128342B1DE563394CC9CB19 /* Pods_WRCalendarFortvOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRCalendarFortvOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F458CD63E81E528AD6271412 /* Pods-WRCalendarFortvOS-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRCalendarFortvOS-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -31,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F70AFAFE70C7BC24276CD2 /* Pods_WRCalendarFortvOS_Example.framework in Frameworks */,
+				DCD85BDD27DABC64866D1992 /* Pods_WRCalendarFortvOS_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD417A81FE4B8D400479B30 /* WRCalendarFortvOS-Example */,
+				BFD4187C1FE5095C00479B30 /* WRcalendarFortvOS */,
 				BFD417A71FE4B8D400479B30 /* Products */,
 				A850F08CB49E127704743EE9 /* Pods */,
 				D85B60704A84CF89F07EB8BD /* Frameworks */,
@@ -77,10 +93,19 @@
 			path = "WRCalendarFortvOS-Example";
 			sourceTree = "<group>";
 		};
+		BFD4187C1FE5095C00479B30 /* WRcalendarFortvOS */ = {
+			isa = PBXGroup;
+			children = (
+				BFD4187D1FE5095C00479B30 /* WRcalendarFortvOS.h */,
+				BFD4187E1FE5095C00479B30 /* Info.plist */,
+			);
+			path = WRcalendarFortvOS;
+			sourceTree = "<group>";
+		};
 		D85B60704A84CF89F07EB8BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				12AE7A5EF6B82B8B50EF8EF8 /* Pods_WRCalendarFortvOS_Example.framework */,
+				D128342B1DE563394CC9CB19 /* Pods_WRCalendarFortvOS_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,6 +123,7 @@
 				BFD417A41FE4B8D400479B30 /* Resources */,
 				9F21E016C8A2E5E9C59C0827 /* [CP] Embed Pods Frameworks */,
 				463001DFC7B43B0BD4567386 /* [CP] Copy Pods Resources */,
+				BFD418871FE5095C00479B30 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
