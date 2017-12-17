@@ -9,7 +9,7 @@ import UIKit
 import DateToolsSwift
 
 class WRCurrentTimeIndicator: UICollectionReusableView {
-    @IBOutlet weak var timeLbl: UILabel!
+//    @IBOutlet weak var timeLbl: UILabel!
     let dateFormatter = DateFormatter()
     
     override func awakeFromNib() {
@@ -23,6 +23,6 @@ class WRCurrentTimeIndicator: UICollectionReusableView {
     }
     
     @objc func updateTimer() {
-        timeLbl.text = dateFormatter.string(from: Date())
+//        timeLbl.text = dateFormatter.string(from: Date())
     }
 }

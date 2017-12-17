@@ -183,10 +183,10 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
         attributes.zIndex = zIndexForElementKind(DecorationViewKinds.rowHeaderBackground)
 
         //current time indicator
-        (attributes, currentTimeIndicatorAttributes) =
-            layoutAttributesForDecorationView(at: IndexPath(row: 0, section: 0),
-                                              ofKind: DecorationViewKinds.currentTimeIndicator,
-                                              withItemCache: currentTimeIndicatorAttributes)
+//        (attributes, currentTimeIndicatorAttributes) =
+//            layoutAttributesForDecorationView(at: IndexPath(row: 0, section: 0),
+//                                              ofKind: DecorationViewKinds.currentTimeIndicator,
+//                                              withItemCache: currentTimeIndicatorAttributes)
         let timeY = calendarContentMinX + nearbyint(CGFloat(currentTimeComponents.hour!) * hourHeight
             + CGFloat(currentTimeComponents.minute!) * minuteHeight)
         
@@ -194,7 +194,7 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
         let currentTimeIndicatorMinX: CGFloat = (max(collectionView!.contentOffset.x, 0.0) + (rowHeaderWidth - currentTimeIndicatorSize.width))
         attributes.frame = CGRect(origin: CGPoint(x: currentTimeIndicatorMinX, y: currentTimeIndicatorMinY),
                                                       size: currentTimeIndicatorSize)
-        attributes.zIndex = zIndexForElementKind(DecorationViewKinds.currentTimeIndicator)
+//        attributes.zIndex = zIndexForElementKind(DecorationViewKinds.currentTimeIndicator)
         
         //current time gridline
         (attributes, currentTimeHorizontalGridlineAttributes) =

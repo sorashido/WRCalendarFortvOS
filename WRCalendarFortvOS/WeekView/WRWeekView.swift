@@ -338,27 +338,27 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell!
     }
     
-    public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        var view: UICollectionReusableView
-        
-        if kind == SupplementaryViewKinds.columnHeader {
-            let columnHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                               withReuseIdentifier: ReuseIdentifiers.columnHeader,
-                                                                               for: indexPath) as! WRColumnHeader
-            columnHeader.date = flowLayout.dateForColumnHeader(at: indexPath)
-            view = columnHeader
-        } else if kind == SupplementaryViewKinds.rowHeader {
-            let rowHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                            withReuseIdentifier: ReuseIdentifiers.rowHeader,
-                                                                            for: indexPath) as! WRRowHeader
-            rowHeader.date = flowLayout.dateForTimeRowHeader(at: indexPath)
-            view = rowHeader
-        } else {
-            view = UICollectionReusableView()
-        }
-        
-        return view
-    }
+//    public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        var view: UICollectionReusableView
+//
+//        if kind == SupplementaryViewKinds.columnHeader {
+//            let columnHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+//                                                                               withReuseIdentifier: ReuseIdentifiers.columnHeader,
+//                                                                               for: indexPath) as! WRColumnHeader
+//            columnHeader.date = flowLayout.dateForColumnHeader(at: indexPath)
+//            view = columnHeader
+//        } else if kind == SupplementaryViewKinds.rowHeader {
+//            let rowHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+//                                                                            withReuseIdentifier: ReuseIdentifiers.rowHeader,
+//                                                                            for: indexPath) as! WRRowHeader
+//            rowHeader.date = flowLayout.dateForTimeRowHeader(at: indexPath)
+//            view = rowHeader
+//        } else {
+//            view = UICollectionReusableView()
+//        }
+//
+//        return view
+//    }
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         initialContentOffset = scrollView.contentOffset
