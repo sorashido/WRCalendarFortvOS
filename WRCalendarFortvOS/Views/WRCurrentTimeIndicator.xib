@@ -29,6 +29,9 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="timeLbl" destination="kNH-kS-1rn" id="IMn-eJ-xz2"/>
+            </connections>
         </view>
     </objects>
 </document>

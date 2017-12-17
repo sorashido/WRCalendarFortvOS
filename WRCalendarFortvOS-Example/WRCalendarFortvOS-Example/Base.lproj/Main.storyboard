@@ -22,13 +22,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ssv-Ui-WaR" customClass="WRWeekView" customModule="WRCalendarFortvOS">
-                                <rect key="frame" x="840" y="476" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssv-Ui-WaR" customClass="WRWeekView" customModule="WRCalendarFortvOS">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ssv-Ui-WaR" secondAttribute="trailing" id="EiM-we-SAe"/>
+                            <constraint firstItem="Ssv-Ui-WaR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZnV-p1-oWp"/>
+                            <constraint firstItem="Ssv-Ui-WaR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fFp-9m-L9V"/>
+                            <constraint firstAttribute="bottom" secondItem="Ssv-Ui-WaR" secondAttribute="bottom" id="qDg-lF-PUt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
                     <connections>

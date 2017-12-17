@@ -36,6 +36,10 @@
                 <constraint firstItem="pLq-dm-tfe" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="jHP-Ym-tbv"/>
                 <constraint firstAttribute="bottom" secondItem="Q9z-bN-EyV" secondAttribute="bottom" constant="6" id="mff-mn-Exd"/>
             </constraints>
+            <connections>
+                <outlet property="dayLbl" destination="pLq-dm-tfe" id="KM5-ul-XFa"/>
+                <outlet property="weekdayLbl" destination="Q9z-bN-EyV" id="gEL-0G-OdX"/>
+            </connections>
             <point key="canvasLocation" x="-35" y="-139"/>
         </collectionReusableView>
     </objects>

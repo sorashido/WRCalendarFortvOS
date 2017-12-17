@@ -11,7 +11,7 @@ import UIKit
 class WREventCell: UICollectionViewCell {
     @IBOutlet weak var borderView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

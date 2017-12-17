@@ -327,14 +327,14 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         let date = flowLayout.dateForColumnHeader(at: indexPath)
         let key = dateFormatter.string(from: date)
         let events = eventBySection[key]
-        
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifiers.defaultCell,
                                                       for: indexPath) as? WREventCell
         guard cell != nil else { fatalError() }
         guard events != nil else { fatalError() }
-        
+
         cell!.event = events![indexPath.row]
-        
+
         return cell!
     }
     
@@ -356,10 +356,9 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
 //        } else {
 //            view = UICollectionReusableView()
 //        }
-//
 //        return view
 //    }
-    
+
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         initialContentOffset = scrollView.contentOffset
     }
