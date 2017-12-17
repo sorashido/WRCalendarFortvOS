@@ -1,0 +1,19 @@
+PODS:
+  - DateToolsSwift (2.0.3)
+  - WRCalendarFortvOS (0.0.1):
+    - DateToolsSwift
+
+DEPENDENCIES:
+  - WRCalendarFortvOS (from `../`)
+
+EXTERNAL SOURCES:
+  WRCalendarFortvOS:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DateToolsSwift: bf69bf9056d9e53c5c03f06e51f219b9b8b02f9e
+  WRCalendarFortvOS: a17db5d7b285178381ebbb6f5eb0ec27edd237b7
+
+PODFILE CHECKSUM: b565f3a564311f3c8125a9901c62f7961ee6f066
+
+COCOAPODS: 1.3.1

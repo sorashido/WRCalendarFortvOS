@@ -1,0 +1,32 @@
+{
+  "name": "WRCalendarFortvOS",
+  "version": "0.0.1",
+  "summary": "A short description of WRCalendarFortvOS.",
+  "description": "WRCalendarFortvOS",
+  "homepage": "https://github.com/sorashido/WRCalendarFortvOS.git",
+  "license": "MIT",
+  "authors": {
+    "shido": "poporotylm@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/sorashido/WRCalendarFortvOS.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "WRCalendarViewFortvOS/**/*",
+  "resource_bundles": {
+    "WRCalendarViewFortvOS": [
+      "WRCalendarViewFortvOS/**/*.{storyboard,xib}"
+    ]
+  },
+  "dependencies": {
+    "DateToolsSwift": [
+
+    ]
+  },
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}
