@@ -83,7 +83,7 @@ public class WRWeekView: UIView {
     
     func registerViewClasses() {
         let podBundle = Bundle(for: WRWeekView.self)
-        let bundleURL = podBundle.url(forResource: "WRCalendarView", withExtension: "bundle")
+        let bundleURL = podBundle.url(forResource: "WRCalendarViewFortvOS", withExtension: "bundle")
         let bundle = Bundle(url: bundleURL!)!
 
         //cell

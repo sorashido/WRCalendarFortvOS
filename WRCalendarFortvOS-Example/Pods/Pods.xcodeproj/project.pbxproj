@@ -7,94 +7,171 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010BD966E94CF5280290EF94D8727230 /* Pods-WRCalendarFortvOS-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7B3EF33737274BC5BBFACAE9E2D4A /* Pods-WRCalendarFortvOS-Example-dummy.m */; };
-		0C87161959A8014DC738EA510146CAEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D63B397DD7C2A0B6C4DAADFD5B12F1 /* Foundation.framework */; };
+		01AF57AFC0055B844D54AFCC1EEBD120 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B4F1754658DF5CE5A72401BBEA0ED /* StringExtension.swift */; };
+		0BEA8DAE03FB551DFAF6D00345BB6D6A /* UIColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFCC07FBA8F36EEAB90A7D71F0967F /* UIColorExtention.swift */; };
+		0D595D74174F11F7B4258C0DCF3B7588 /* WRRowHeaderBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89B821EEADA78544220613013B9BF3 /* WRRowHeaderBackground.swift */; };
+		12594A8D39596917BA0ABF2421FF1121 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C361F9268A78F8D9E7C0AFDA305DC54E /* NSObjectExtension.swift */; };
+		15377B8377D0207E4E08CFFCA94207D2 /* WRWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797DC06DD2BDF449C0375EA62ACC2CD2 /* WRWeekView.swift */; };
+		168ADAE7D72A93EB114993067A66CCEA /* WRColumnHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20B0DB25E1226EED6F63E6CA340B97 /* WRColumnHeader.swift */; };
+		196A1A88D23518DC39C6C1333A157F0C /* WRColumnHeader.xib in Sources */ = {isa = PBXBuildFile; fileRef = DE45445BB0A5E143CCA57E1D6BF76587 /* WRColumnHeader.xib */; };
+		1A8D3DB48F0B5FE32C08D2F7F6F5921F /* WRRowHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565D0AF5D463558A7E49C5EBD4EC2DB3 /* WRRowHeader.xib */; };
+		1AC2B86FBFBA449EA907A6BC452C44D4 /* WRRowHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D3AD2625361308C39CCB1367870CB /* WRRowHeader.swift */; };
+		1B456E4E83D6D77B36869B0F3929AC00 /* DateToolsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0153450D8B86EDB33FEA73CCC2E4E6AC /* DateToolsSwift.framework */; };
+		20850E04C0EFD3193809BA445161FF7B /* WRCalendarFortvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D55E4BD445F0E89E7667624AF8728C /* WRCalendarFortvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2447F10D58B9326DAD2D5DEEB4953298 /* WRCurrentTimeGridline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18686BEBDF1F64B32446BB8987103DC2 /* WRCurrentTimeGridline.swift */; };
 		2BC39A33E21B7A8820E4B2FE48723FB5 /* DateToolsSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E09110CCD2B661554BCFC8ED4BDAD /* DateToolsSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37DD27F3C615BEC835756176D8BDD0F2 /* WRColumnHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE45445BB0A5E143CCA57E1D6BF76587 /* WRColumnHeader.xib */; };
 		39896AD7E2573C35F4A82C5EB8F04655 /* TimePeriodGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F5EE02EF0C85BFB81FEC171864058 /* TimePeriodGroup.swift */; };
+		3B73C1CF2755CC7910C84C78B13512B8 /* WRCurrentTimeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270447559B74F749150292BFBE0E1D3 /* WRCurrentTimeIndicator.swift */; };
+		41336B953259B836376AEA1CA627E22F /* Pods-WRCalendarFortvOS-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7B3EF33737274BC5BBFACAE9E2D4A /* Pods-WRCalendarFortvOS-Example-dummy.m */; };
 		4AEA03365E6DFD3203288595698AB8CC /* Date+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BE95963D7E2CD63ECF57DD5B0F55F /* Date+Inits.swift */; };
 		4E5E70335AC94377291526163247B72A /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF7C8149B26823EF989D664632D3DB /* Date+Format.swift */; };
+		518F365848B9D7D09975105092B6E4D1 /* WRWeekViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC8A45165B642F54DD1F22D9ECFED1 /* WRWeekViewFlowLayout.swift */; };
+		539B782140B348DA199DF8150C1446D8 /* WRCalendarViewFortvOS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01A66D3823D4E75BC223B3B8865EC312 /* WRCalendarViewFortvOS.bundle */; };
+		540F01E6B54D2E2BEBA7C3C0D9D46F08 /* WREventCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 6984433BE935E9D1ED4AAAD201EAFF11 /* WREventCell.xib */; };
 		563A18A4003D535DE5E75AA05B342ADB /* DateToolsSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A310EB62602BC96A86F67F6DD80DBD32 /* DateToolsSwift-dummy.m */; };
+		5675286BB1DFCFBCB9389DA4C2BF1010 /* Pods-WRCalendarFortvOS-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D531D1783F2BA89C5F44A1F6480CA80C /* Pods-WRCalendarFortvOS-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C97B56B7994F1393537B4488ADE0FB3 /* TimePeriodCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E70ECB80E5C5667A764171623F88D /* TimePeriodCollection.swift */; };
 		5E516EEEB94BB900187FDFA3CC2E9FB4 /* Date+Manipulations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1FDDB5A3052469206337EBC6ED6060 /* Date+Manipulations.swift */; };
-		63B9584D48E1D9CD6FD2F68B07A3FA28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D63B397DD7C2A0B6C4DAADFD5B12F1 /* Foundation.framework */; };
+		630DFC3FE9BF09DC8CD58B279AD524F7 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = B892C1DC21F88CF427A86C23CFF01CA7 /* Info.plist */; };
+		63B9584D48E1D9CD6FD2F68B07A3FA28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941F48E785CC1F1EBF115B18231B073A /* Foundation.framework */; };
 		64C9F4903A26546EA0BB3B3A899CF915 /* Date+Comparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76A57F93D9EF4C024C3EF943E33B2 /* Date+Comparators.swift */; };
+		65361875BF7EB22A3D3E58F2B7865FC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07103F0CF4C13E8C602F203FA78789 /* Constants.swift */; };
+		664A2474C7697FA738B6C21342B4B731 /* WREventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE3C45E70C9FF768960361D1EF9866 /* WREventCell.swift */; };
+		66FC7B0534DF4DC9B8FD26DF8C99A462 /* WREvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612823DAC575BD7ADADF2E0416756B46 /* WREvent.swift */; };
 		6A0507497F0419B6E24146DB4DD3168A /* TimePeriodChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45BA637510E6474B1234D836E3CCCD /* TimePeriodChain.swift */; };
+		6DF2266DFB5B8B85AE683C1663BAC94D /* WRRowHeader.xib in Sources */ = {isa = PBXBuildFile; fileRef = 565D0AF5D463558A7E49C5EBD4EC2DB3 /* WRRowHeader.xib */; };
 		6E7D1D65F26E071B668B6C38CE547C8E /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3D25D9B2535B70A2274CED5D17446C /* Date+TimeAgo.swift */; };
+		7252C97FF16546A130F16DAD5FDB5FC6 /* WRCalendarFortvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F5676A7EC3122300F579D0AF6285DBD /* WRCalendarFortvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87F6B28B23C09213ED34C2B019F50140 /* WREventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6984433BE935E9D1ED4AAAD201EAFF11 /* WREventCell.xib */; };
 		99E3BEA8FC5191DC18AF7BF32A6E9086 /* Date+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831316576C99BD0C02D31EC1F30DECDA /* Date+Bundle.swift */; };
-		A3AF608AC78736100F9536D0AE6ED92D /* Pods-WRCalendarFortvOS-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D531D1783F2BA89C5F44A1F6480CA80C /* Pods-WRCalendarFortvOS-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7997124D1A924033565B8FB3F8D3CFA /* WRCalendarFortvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9A1FCD815EDA6D113FCE034B2BC934 /* WRCalendarFortvOS-dummy.m */; };
 		AAB052ACD1C2F5CD61EA09A67BE5938F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4B2213DA926E520C9AAA425E3AE24 /* Enums.swift */; };
+		AE6008818BA867A434FBE50CED2247E3 /* WRGridLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088A1CF265C6890631FB357A32402995 /* WRGridLine.swift */; };
 		B0A382528DC015EFD81F39C35D669F8E /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E02135F190582F5AFC385483E056C87 /* TimePeriod.swift */; };
+		B3A3542DF8E46FCB1F243E17AEEDBDBE /* WRCornerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AF22E279FFEE99FFDD82F034410E4 /* WRCornerHeader.swift */; };
+		B3AAF9B931962AA6E1FC36FD1AE4B329 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941F48E785CC1F1EBF115B18231B073A /* Foundation.framework */; };
+		B5563FDFE567EB4372D53B5ABCE015EB /* WRCurrentTimeIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8DA59F91352E600AC6A791D14972C6D /* WRCurrentTimeIndicator.xib */; };
+		BF7B3B4C1BBE1583D92039B1539CF6C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941F48E785CC1F1EBF115B18231B073A /* Foundation.framework */; };
 		C0BA12E6FF13BCD3D8129522B3BC6ACF /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F4EBA06BB302DB79CE4DEB920A6FB4F /* DateTools.bundle */; };
 		DA770B19AF7C2D1F934DE2A5CD6C617C /* TimeChunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07550D2FBBC52A0EBD7FC4D7108CC7A /* TimeChunk.swift */; };
 		DFF1957B63D91AF9BDDE95C5F9B56CE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DE682DE38C97531A99867782B5C79D /* Constants.swift */; };
+		EC90B72DF211BB8111BD260F2C4957AA /* WRCurrentTimeIndicator.xib in Sources */ = {isa = PBXBuildFile; fileRef = B8DA59F91352E600AC6A791D14972C6D /* WRCurrentTimeIndicator.xib */; };
 		EED12DA3B3BD6B6598A327DEF7D28817 /* Integer+DateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9D18CD6EB3C929B585FDD360D4C5F8 /* Integer+DateTools.swift */; };
 		EF8A83F94EDB6C7C42F36FFF618D0526 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302E33186CC481DD8AC967EBC65A5F7 /* Date+Components.swift */; };
+		F5D2E9042C2D24D2976E72E10CE39283 /* WRColumnHeaderBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345B2F5A79463421EC72CA18D60B095 /* WRColumnHeaderBackground.swift */; };
+		FDB19C15CE7305499585BFE13703C365 /* WRTodayBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0A1CA5479A41E69B4BE3519C5587A /* WRTodayBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		89987A28E0B9F34CAFD38BB858CFF0C2 /* PBXContainerItemProxy */ = {
+		3F759E41B8F85E07E738C7C98D82DD70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE90C8619F4DE0919CCBB7A4BD5A7FD4;
+			remoteInfo = "WRCalendarFortvOS-WRCalendarViewFortvOS";
+		};
+		924164D950CB699F35A0833EC28F459E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E89CFD99B895BCC6E8EDC2F95A03500C;
 			remoteInfo = DateToolsSwift;
 		};
-		E017434DD65B59A135664436D6D39C84 /* PBXContainerItemProxy */ = {
+		97CA262029CA7B5D2ABD078E828833A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D697708F26EFAFCCEECB0DFB48173C2F;
-			remoteInfo = "WRCalendarFortvOS-WRCalendarViewFortvOS";
+			remoteGlobalIDString = C4BC94E4D438D7CFFF59A48925BF868A;
+			remoteInfo = WRCalendarFortvOS;
+		};
+		C462D03E1B384811F4A48C7CF35478BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E89CFD99B895BCC6E8EDC2F95A03500C;
+			remoteInfo = DateToolsSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		007AD476F208E32E81F9C51DC02822A8 /* WRCalendarViewFortvOS.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WRCalendarViewFortvOS.bundle; path = WRCalendarViewFortvOS.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		0150B09B18EBA0E9585FFB9A8CDBBE8F /* DateToolsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DateToolsSwift.framework; path = DateToolsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0153450D8B86EDB33FEA73CCC2E4E6AC /* DateToolsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateToolsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A66D3823D4E75BC223B3B8865EC312 /* WRCalendarViewFortvOS.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WRCalendarViewFortvOS.bundle; path = WRCalendarViewFortvOS.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		088A1CF265C6890631FB357A32402995 /* WRGridLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRGridLine.swift; sourceTree = "<group>"; };
 		0AD7B3EF33737274BC5BBFACAE9E2D4A /* Pods-WRCalendarFortvOS-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WRCalendarFortvOS-Example-dummy.m"; sourceTree = "<group>"; };
-		17D63B397DD7C2A0B6C4DAADFD5B12F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1345B2F5A79463421EC72CA18D60B095 /* WRColumnHeaderBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRColumnHeaderBackground.swift; sourceTree = "<group>"; };
+		18686BEBDF1F64B32446BB8987103DC2 /* WRCurrentTimeGridline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRCurrentTimeGridline.swift; sourceTree = "<group>"; };
+		1FAE3C45E70C9FF768960361D1EF9866 /* WREventCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WREventCell.swift; sourceTree = "<group>"; };
+		21DD0A233F17FADA0FFA950A8856F24E /* ResourceBundle-WRCalendarViewFortvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-WRCalendarViewFortvOS-Info.plist"; sourceTree = "<group>"; };
 		2B3D25D9B2535B70A2274CED5D17446C /* Date+TimeAgo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+TimeAgo.swift"; path = "DateToolsSwift/DateTools/Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		2F4EBA06BB302DB79CE4DEB920A6FB4F /* DateTools.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = DateToolsSwift/DateTools/DateTools.bundle; sourceTree = "<group>"; };
+		2F5676A7EC3122300F579D0AF6285DBD /* WRCalendarFortvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WRCalendarFortvOS-umbrella.h"; sourceTree = "<group>"; };
 		385B1A1972A1EE479BF9C9FC78F3F42D /* Pods-WRCalendarFortvOS-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WRCalendarFortvOS-Example-resources.sh"; sourceTree = "<group>"; };
 		3897E3D818383939699C990596D09764 /* Pods-WRCalendarFortvOS-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WRCalendarFortvOS-Example.modulemap"; sourceTree = "<group>"; };
 		3A452C1E4F92FF67E447973FA6E59882 /* Pods-WRCalendarFortvOS-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRCalendarFortvOS-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3BB4B2213DA926E520C9AAA425E3AE24 /* Enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = DateToolsSwift/DateTools/Enums.swift; sourceTree = "<group>"; };
 		3BEF7C8149B26823EF989D664632D3DB /* Date+Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Format.swift"; path = "DateToolsSwift/DateTools/Date+Format.swift"; sourceTree = "<group>"; };
+		3C07103F0CF4C13E8C602F203FA78789 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3FFAC680833A99ABDDBE9CE548B6DCF1 /* WRCalendarFortvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WRCalendarFortvOS.xcconfig; sourceTree = "<group>"; };
+		40EC8A45165B642F54DD1F22D9ECFED1 /* WRWeekViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRWeekViewFlowLayout.swift; sourceTree = "<group>"; };
+		4C20B0DB25E1226EED6F63E6CA340B97 /* WRColumnHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRColumnHeader.swift; sourceTree = "<group>"; };
 		4C4AF8068091442C4C3BF8919404B04F /* Pods-WRCalendarFortvOS-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WRCalendarFortvOS-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4D0E09110CCD2B661554BCFC8ED4BDAD /* DateToolsSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DateToolsSwift-umbrella.h"; sourceTree = "<group>"; };
 		4F45BA637510E6474B1234D836E3CCCD /* TimePeriodChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePeriodChain.swift; path = DateToolsSwift/DateTools/TimePeriodChain.swift; sourceTree = "<group>"; };
+		565D0AF5D463558A7E49C5EBD4EC2DB3 /* WRRowHeader.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WRRowHeader.xib; sourceTree = "<group>"; };
 		5B9D18CD6EB3C929B585FDD360D4C5F8 /* Integer+DateTools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Integer+DateTools.swift"; path = "DateToolsSwift/DateTools/Integer+DateTools.swift"; sourceTree = "<group>"; };
 		5E3F5EE02EF0C85BFB81FEC171864058 /* TimePeriodGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePeriodGroup.swift; path = DateToolsSwift/DateTools/TimePeriodGroup.swift; sourceTree = "<group>"; };
+		612823DAC575BD7ADADF2E0416756B46 /* WREvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WREvent.swift; sourceTree = "<group>"; };
 		622D7F96DC4D848CFD40A0FCC72B9509 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652AF22E279FFEE99FFDD82F034410E4 /* WRCornerHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRCornerHeader.swift; sourceTree = "<group>"; };
+		6984433BE935E9D1ED4AAAD201EAFF11 /* WREventCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WREventCell.xib; sourceTree = "<group>"; };
+		6A402D83D4E6C72FE739ADD43BD15288 /* WRCalendarFortvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WRCalendarFortvOS.framework; path = WRCalendarFortvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DC352AD5EA2C3BA2AAF1ADE28628BB /* Pods-WRCalendarFortvOS-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WRCalendarFortvOS-Example-frameworks.sh"; sourceTree = "<group>"; };
+		75D55E4BD445F0E89E7667624AF8728C /* WRCalendarFortvOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WRCalendarFortvOS.h; path = WRCalendarFortvOS/WRCalendarFortvOS.h; sourceTree = "<group>"; };
 		787E70ECB80E5C5667A764171623F88D /* TimePeriodCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePeriodCollection.swift; path = DateToolsSwift/DateTools/TimePeriodCollection.swift; sourceTree = "<group>"; };
+		797DC06DD2BDF449C0375EA62ACC2CD2 /* WRWeekView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRWeekView.swift; sourceTree = "<group>"; };
 		831316576C99BD0C02D31EC1F30DECDA /* Date+Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Bundle.swift"; path = "DateToolsSwift/DateTools/Date+Bundle.swift"; sourceTree = "<group>"; };
+		84EFCC07FBA8F36EEAB90A7D71F0967F /* UIColorExtention.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
 		8E02135F190582F5AFC385483E056C87 /* TimePeriod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePeriod.swift; path = DateToolsSwift/DateTools/TimePeriod.swift; sourceTree = "<group>"; };
+		90D3B295955F08BDA5DC4BAC3967BF09 /* DateToolsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DateToolsSwift.framework; path = DateToolsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		941F48E785CC1F1EBF115B18231B073A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9C0E33EC0750CDD808E92C8999BF94F2 /* DateToolsSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DateToolsSwift.xcconfig; sourceTree = "<group>"; };
+		A270447559B74F749150292BFBE0E1D3 /* WRCurrentTimeIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRCurrentTimeIndicator.swift; sourceTree = "<group>"; };
 		A310EB62602BC96A86F67F6DD80DBD32 /* DateToolsSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DateToolsSwift-dummy.m"; sourceTree = "<group>"; };
+		A9C62A0363E2D463B58E679F5F94E792 /* Pods_WRCalendarFortvOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WRCalendarFortvOS_Example.framework; path = "Pods-WRCalendarFortvOS-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1FDDB5A3052469206337EBC6ED6060 /* Date+Manipulations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Manipulations.swift"; path = "DateToolsSwift/DateTools/Date+Manipulations.swift"; sourceTree = "<group>"; };
+		AE77490D4F6B0EFD29C0B9A034DB8F13 /* WRCalendarFortvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WRCalendarFortvOS.modulemap; sourceTree = "<group>"; };
+		AE89B821EEADA78544220613013B9BF3 /* WRRowHeaderBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRRowHeaderBackground.swift; sourceTree = "<group>"; };
 		AFA76A57F93D9EF4C024C3EF943E33B2 /* Date+Comparators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Comparators.swift"; path = "DateToolsSwift/DateTools/Date+Comparators.swift"; sourceTree = "<group>"; };
 		B12BE95963D7E2CD63ECF57DD5B0F55F /* Date+Inits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Inits.swift"; path = "DateToolsSwift/DateTools/Date+Inits.swift"; sourceTree = "<group>"; };
+		B892C1DC21F88CF427A86C23CFF01CA7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = WRCalendarFortvOS/Info.plist; sourceTree = "<group>"; };
+		B8DA59F91352E600AC6A791D14972C6D /* WRCurrentTimeIndicator.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WRCurrentTimeIndicator.xib; sourceTree = "<group>"; };
 		B9728070AF91F489D570E5DF0FFD8DC5 /* Pods-WRCalendarFortvOS-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRCalendarFortvOS-Example.release.xcconfig"; sourceTree = "<group>"; };
 		BA3674FFDA562FFD57EA7D565A0E2E84 /* Pods-WRCalendarFortvOS-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRCalendarFortvOS-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C361F9268A78F8D9E7C0AFDA305DC54E /* NSObjectExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		C4635BB446A038390290E1B85C9C5EBA /* DateToolsSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DateToolsSwift-prefix.pch"; sourceTree = "<group>"; };
-		C90A4875D549D5D05ED2D12B9430D83E /* Pods_WRCalendarFortvOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WRCalendarFortvOS_Example.framework; path = "Pods-WRCalendarFortvOS-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB9A1FCD815EDA6D113FCE034B2BC934 /* WRCalendarFortvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WRCalendarFortvOS-dummy.m"; sourceTree = "<group>"; };
+		D10D3AD2625361308C39CCB1367870CB /* WRRowHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRRowHeader.swift; sourceTree = "<group>"; };
 		D1DE682DE38C97531A99867782B5C79D /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = DateToolsSwift/DateTools/Constants.swift; sourceTree = "<group>"; };
 		D531D1783F2BA89C5F44A1F6480CA80C /* Pods-WRCalendarFortvOS-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WRCalendarFortvOS-Example-umbrella.h"; sourceTree = "<group>"; };
+		D7AEC7B4D77146946E5E8E9898B8D256 /* WRCalendarFortvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WRCalendarFortvOS-prefix.pch"; sourceTree = "<group>"; };
+		D86CC0F275BBF0505394025771451D98 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD0A1CA5479A41E69B4BE3519C5587A /* WRTodayBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRTodayBackground.swift; sourceTree = "<group>"; };
+		DE45445BB0A5E143CCA57E1D6BF76587 /* WRColumnHeader.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WRColumnHeader.xib; sourceTree = "<group>"; };
 		E302E33186CC481DD8AC967EBC65A5F7 /* Date+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Components.swift"; path = "DateToolsSwift/DateTools/Date+Components.swift"; sourceTree = "<group>"; };
 		E94AA91A66F964E0B1E261A3AAFF11C4 /* DateToolsSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DateToolsSwift.modulemap; sourceTree = "<group>"; };
-		EA7C54597781056BFF0E1201BEBFCB96 /* ResourceBundle-WRCalendarViewFortvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-WRCalendarViewFortvOS-Info.plist"; sourceTree = "<group>"; };
 		EE17FF2B7FD718091464219F7AAB0B2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F07550D2FBBC52A0EBD7FC4D7108CC7A /* TimeChunk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeChunk.swift; path = DateToolsSwift/DateTools/TimeChunk.swift; sourceTree = "<group>"; };
+		F82B4F1754658DF5CE5A72401BBEA0ED /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4D9651028F616B4BF7785C768FDA4653 /* Frameworks */ = {
+		15EBA1A0DA8BD3F9210BDF06403A76A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C87161959A8014DC738EA510146CAEA /* Foundation.framework in Frameworks */,
+				BF7B3B4C1BBE1583D92039B1539CF6C2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +183,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		593D492A4CF1128C45C7A50B49DEBD25 /* Frameworks */ = {
+		82FDEE9B6478E593D9C177D684BCA018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B456E4E83D6D77B36869B0F3929AC00 /* DateToolsSwift.framework in Frameworks */,
+				B3AAF9B931962AA6E1FC36FD1AE4B329 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3935AC98F78453204F0D84A6055EBA1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -116,6 +202,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06189F19FFD57AC4C268CD84E0AAB497 /* WRCalendarFortvOS */ = {
+			isa = PBXGroup;
+			children = (
+				B892C1DC21F88CF427A86C23CFF01CA7 /* Info.plist */,
+				75D55E4BD445F0E89E7667624AF8728C /* WRCalendarFortvOS.h */,
+				5554CE1C6FDF8392120C9AF096FA0B92 /* Events */,
+				7E75C323BED714244F4F22585BF94A17 /* FlowLayout */,
+				EB9331E4AAC55B981D0AC9305BD1FABB /* Helpers */,
+				69D53B51CF37DB8B2FAB235113EA5B4C /* Resources */,
+				8E395C445586521E1202D339B9B6558D /* Support Files */,
+				8B77526F3D1CB0ED68430051B5167645 /* Views */,
+				147463A34FF97E9255F3DF4B634C1DC3 /* WeekView */,
+			);
+			name = WRCalendarFortvOS;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		0D31EA2478C3C0D46348831841CD9E01 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +235,26 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		147463A34FF97E9255F3DF4B634C1DC3 /* WeekView */ = {
+			isa = PBXGroup;
+			children = (
+				797DC06DD2BDF449C0375EA62ACC2CD2 /* WRWeekView.swift */,
+			);
+			name = WeekView;
+			path = WRCalendarFortvOS/WeekView;
+			sourceTree = "<group>";
+		};
+		24A5575F6BAF9C47D07AB7D0B3B5F77E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90D3B295955F08BDA5DC4BAC3967BF09 /* DateToolsSwift.framework */,
+				A9C62A0363E2D463B58E679F5F94E792 /* Pods_WRCalendarFortvOS_Example.framework */,
+				6A402D83D4E6C72FE739ADD43BD15288 /* WRCalendarFortvOS.framework */,
+				01A66D3823D4E75BC223B3B8865EC312 /* WRCalendarViewFortvOS.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		354C1C5E8C039A375690649CBCF734EB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,44 +269,95 @@
 			path = "../Target Support Files/DateToolsSwift";
 			sourceTree = "<group>";
 		};
-		35913557E92846950E54C5CBFEE86B49 /* WRCalendarFortvOS */ = {
+		5554CE1C6FDF8392120C9AF096FA0B92 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				495BC4EA83CED69B53A12CB7E29D0B9F /* Support Files */,
+				612823DAC575BD7ADADF2E0416756B46 /* WREvent.swift */,
 			);
-			name = WRCalendarFortvOS;
-			path = ../..;
+			name = Events;
+			path = WRCalendarFortvOS/Events;
 			sourceTree = "<group>";
 		};
-		3D5217C02D7D034C4358544F23269522 /* Products */ = {
+		69D53B51CF37DB8B2FAB235113EA5B4C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0150B09B18EBA0E9585FFB9A8CDBBE8F /* DateToolsSwift.framework */,
-				C90A4875D549D5D05ED2D12B9430D83E /* Pods_WRCalendarFortvOS_Example.framework */,
-				007AD476F208E32E81F9C51DC02822A8 /* WRCalendarViewFortvOS.bundle */,
 			);
-			name = Products;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		495BC4EA83CED69B53A12CB7E29D0B9F /* Support Files */ = {
+		6DE769B3765F866BC1155A7BE1D1D72C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EA7C54597781056BFF0E1201BEBFCB96 /* ResourceBundle-WRCalendarViewFortvOS-Info.plist */,
+				06189F19FFD57AC4C268CD84E0AAB497 /* WRCalendarFortvOS */,
 			);
-			name = "Support Files";
-			path = "WRCalendarFortvOS-Example/Pods/Target Support Files/WRCalendarFortvOS";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BBE225FC5AE9FA400E93FF82B36617DF /* Development Pods */,
-				BB99B8D4C7329D10E7E4451B0A72C15A /* Frameworks */,
+				6DE769B3765F866BC1155A7BE1D1D72C /* Development Pods */,
+				95258D2CC079DF3A4B6EFDA157324E66 /* Frameworks */,
 				C31C2D824186D8DA07BB1316F56D891E /* Pods */,
-				3D5217C02D7D034C4358544F23269522 /* Products */,
+				24A5575F6BAF9C47D07AB7D0B3B5F77E /* Products */,
 				13C19C8CED146A7B61383E447FCA94EE /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7E75C323BED714244F4F22585BF94A17 /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				40EC8A45165B642F54DD1F22D9ECFED1 /* WRWeekViewFlowLayout.swift */,
+			);
+			name = FlowLayout;
+			path = WRCalendarFortvOS/FlowLayout;
+			sourceTree = "<group>";
+		};
+		8B77526F3D1CB0ED68430051B5167645 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C20B0DB25E1226EED6F63E6CA340B97 /* WRColumnHeader.swift */,
+				DE45445BB0A5E143CCA57E1D6BF76587 /* WRColumnHeader.xib */,
+				1345B2F5A79463421EC72CA18D60B095 /* WRColumnHeaderBackground.swift */,
+				652AF22E279FFEE99FFDD82F034410E4 /* WRCornerHeader.swift */,
+				18686BEBDF1F64B32446BB8987103DC2 /* WRCurrentTimeGridline.swift */,
+				A270447559B74F749150292BFBE0E1D3 /* WRCurrentTimeIndicator.swift */,
+				B8DA59F91352E600AC6A791D14972C6D /* WRCurrentTimeIndicator.xib */,
+				1FAE3C45E70C9FF768960361D1EF9866 /* WREventCell.swift */,
+				6984433BE935E9D1ED4AAAD201EAFF11 /* WREventCell.xib */,
+				088A1CF265C6890631FB357A32402995 /* WRGridLine.swift */,
+				D10D3AD2625361308C39CCB1367870CB /* WRRowHeader.swift */,
+				565D0AF5D463558A7E49C5EBD4EC2DB3 /* WRRowHeader.xib */,
+				AE89B821EEADA78544220613013B9BF3 /* WRRowHeaderBackground.swift */,
+				DAD0A1CA5479A41E69B4BE3519C5587A /* WRTodayBackground.swift */,
+			);
+			name = Views;
+			path = WRCalendarFortvOS/Views;
+			sourceTree = "<group>";
+		};
+		8E395C445586521E1202D339B9B6558D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D86CC0F275BBF0505394025771451D98 /* Info.plist */,
+				21DD0A233F17FADA0FFA950A8856F24E /* ResourceBundle-WRCalendarViewFortvOS-Info.plist */,
+				AE77490D4F6B0EFD29C0B9A034DB8F13 /* WRCalendarFortvOS.modulemap */,
+				3FFAC680833A99ABDDBE9CE548B6DCF1 /* WRCalendarFortvOS.xcconfig */,
+				CB9A1FCD815EDA6D113FCE034B2BC934 /* WRCalendarFortvOS-dummy.m */,
+				D7AEC7B4D77146946E5E8E9898B8D256 /* WRCalendarFortvOS-prefix.pch */,
+				2F5676A7EC3122300F579D0AF6285DBD /* WRCalendarFortvOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "WRCalendarFortvOS-Example/Pods/Target Support Files/WRCalendarFortvOS";
+			sourceTree = "<group>";
+		};
+		95258D2CC079DF3A4B6EFDA157324E66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0153450D8B86EDB33FEA73CCC2E4E6AC /* DateToolsSwift.framework */,
+				CD68E692A286783895FF3A2C46E01E57 /* tvOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A99EF97949B9B4908DFCC70A122F92B8 /* DateToolsSwift */ = {
@@ -209,30 +383,6 @@
 			);
 			name = DateToolsSwift;
 			path = DateToolsSwift;
-			sourceTree = "<group>";
-		};
-		ACB6F43550E213F0570FA1E541F56EE8 /* tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				17D63B397DD7C2A0B6C4DAADFD5B12F1 /* Foundation.framework */,
-			);
-			name = tvOS;
-			sourceTree = "<group>";
-		};
-		BB99B8D4C7329D10E7E4451B0A72C15A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ACB6F43550E213F0570FA1E541F56EE8 /* tvOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BBE225FC5AE9FA400E93FF82B36617DF /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				35913557E92846950E54C5CBFEE86B49 /* WRCalendarFortvOS */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		BC91C11BB4BF60C698931238B8DCB6FE /* Pods-WRCalendarFortvOS-Example */ = {
@@ -261,17 +411,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD68E692A286783895FF3A2C46E01E57 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				941F48E785CC1F1EBF115B18231B073A /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		EB9331E4AAC55B981D0AC9305BD1FABB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3C07103F0CF4C13E8C602F203FA78789 /* Constants.swift */,
+				C361F9268A78F8D9E7C0AFDA305DC54E /* NSObjectExtension.swift */,
+				F82B4F1754658DF5CE5A72401BBEA0ED /* StringExtension.swift */,
+				84EFCC07FBA8F36EEAB90A7D71F0967F /* UIColorExtention.swift */,
+			);
+			name = Helpers;
+			path = WRCalendarFortvOS/Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		08A1C1AC6835AB7127EBFE1B944232E5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A3AF608AC78736100F9536D0AE6ED92D /* Pods-WRCalendarFortvOS-Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0B24469DA060E445C2175588E9E4900E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,44 +442,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A658AB4E3D25B567F94A4F41131C73DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7252C97FF16546A130F16DAD5FDB5FC6 /* WRCalendarFortvOS-umbrella.h in Headers */,
+				20850E04C0EFD3193809BA445161FF7B /* WRCalendarFortvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B50085A3D532146BD905494C0C9D3CEF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5675286BB1DFCFBCB9389DA4C2BF1010 /* Pods-WRCalendarFortvOS-Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		899EAAA8B526E81607DCED06D28B3D66 /* Pods-WRCalendarFortvOS-Example */ = {
+		927B754811F472DECCB1F1214EB50C72 /* Pods-WRCalendarFortvOS-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1E97B58EC0C91E0B30955E28A0E1CAA /* Build configuration list for PBXNativeTarget "Pods-WRCalendarFortvOS-Example" */;
+			buildConfigurationList = 0CB9CE2CB663BBE441BD7D57DD0C1E56 /* Build configuration list for PBXNativeTarget "Pods-WRCalendarFortvOS-Example" */;
 			buildPhases = (
-				F40AA006598211E242AAE471E5920993 /* Sources */,
-				4D9651028F616B4BF7785C768FDA4653 /* Frameworks */,
-				08A1C1AC6835AB7127EBFE1B944232E5 /* Headers */,
+				92F18E5EB6DA7E05CAE8A4D5DEBA2D1A /* Sources */,
+				15EBA1A0DA8BD3F9210BDF06403A76A4 /* Frameworks */,
+				B50085A3D532146BD905494C0C9D3CEF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B6E6B3036F57AC22900203E9A90142CA /* PBXTargetDependency */,
-				B3B10E7D8192E7CA9EF8AB66AB79DD83 /* PBXTargetDependency */,
+				2862414F50BA1EC95101AC302BD9F7BE /* PBXTargetDependency */,
+				92C86906D84AFFF85C0FF4FCFE16F39C /* PBXTargetDependency */,
 			);
 			name = "Pods-WRCalendarFortvOS-Example";
 			productName = "Pods-WRCalendarFortvOS-Example";
-			productReference = C90A4875D549D5D05ED2D12B9430D83E /* Pods_WRCalendarFortvOS_Example.framework */;
+			productReference = A9C62A0363E2D463B58E679F5F94E792 /* Pods_WRCalendarFortvOS_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D697708F26EFAFCCEECB0DFB48173C2F /* WRCalendarFortvOS-WRCalendarViewFortvOS */ = {
+		C4BC94E4D438D7CFFF59A48925BF868A /* WRCalendarFortvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 060EDFFD7EE50A7652A4D1DAE5E54BCA /* Build configuration list for PBXNativeTarget "WRCalendarFortvOS-WRCalendarViewFortvOS" */;
+			buildConfigurationList = 6B8AF5BD0DD4279744115FA0FB29D3DD /* Build configuration list for PBXNativeTarget "WRCalendarFortvOS" */;
 			buildPhases = (
-				D7A28497906053BEB7215A0EA03FB3C5 /* Sources */,
-				593D492A4CF1128C45C7A50B49DEBD25 /* Frameworks */,
-				509511122FADF5B662BA3B05EF489D7E /* Resources */,
+				391401435F33FB0E88E17100F9A4CA05 /* Sources */,
+				82FDEE9B6478E593D9C177D684BCA018 /* Frameworks */,
+				3FA8F55BC92114E5D1B026F0DC95284C /* Resources */,
+				A658AB4E3D25B567F94A4F41131C73DA /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CD19D8B5CA751EE599AD9B7EE9DB2D70 /* PBXTargetDependency */,
+				71224D50F4362C00CBE59BF57D76DFDE /* PBXTargetDependency */,
 			);
-			name = "WRCalendarFortvOS-WRCalendarViewFortvOS";
-			productName = "WRCalendarFortvOS-WRCalendarViewFortvOS";
-			productReference = 007AD476F208E32E81F9C51DC02822A8 /* WRCalendarViewFortvOS.bundle */;
-			productType = "com.apple.product-type.bundle";
+			name = WRCalendarFortvOS;
+			productName = WRCalendarFortvOS;
+			productReference = 6A402D83D4E6C72FE739ADD43BD15288 /* WRCalendarFortvOS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		E89CFD99B895BCC6E8EDC2F95A03500C /* DateToolsSwift */ = {
 			isa = PBXNativeTarget;
@@ -334,8 +516,25 @@
 			);
 			name = DateToolsSwift;
 			productName = DateToolsSwift;
-			productReference = 0150B09B18EBA0E9585FFB9A8CDBBE8F /* DateToolsSwift.framework */;
+			productReference = 90D3B295955F08BDA5DC4BAC3967BF09 /* DateToolsSwift.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		FE90C8619F4DE0919CCBB7A4BD5A7FD4 /* WRCalendarFortvOS-WRCalendarViewFortvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6B279FCD4FB3ACBB6B7A6E3590639C8 /* Build configuration list for PBXNativeTarget "WRCalendarFortvOS-WRCalendarViewFortvOS" */;
+			buildPhases = (
+				5A5713E5185862CB6B523A1848B97A54 /* Sources */,
+				C3935AC98F78453204F0D84A6055EBA1 /* Frameworks */,
+				659C983F7D2EA50A31F86846D699B005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WRCalendarFortvOS-WRCalendarViewFortvOS";
+			productName = "WRCalendarFortvOS-WRCalendarViewFortvOS";
+			productReference = 01A66D3823D4E75BC223B3B8865EC312 /* WRCalendarViewFortvOS.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -354,13 +553,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3D5217C02D7D034C4358544F23269522 /* Products */;
+			productRefGroup = 24A5575F6BAF9C47D07AB7D0B3B5F77E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E89CFD99B895BCC6E8EDC2F95A03500C /* DateToolsSwift */,
-				899EAAA8B526E81607DCED06D28B3D66 /* Pods-WRCalendarFortvOS-Example */,
-				D697708F26EFAFCCEECB0DFB48173C2F /* WRCalendarFortvOS-WRCalendarViewFortvOS */,
+				927B754811F472DECCB1F1214EB50C72 /* Pods-WRCalendarFortvOS-Example */,
+				C4BC94E4D438D7CFFF59A48925BF868A /* WRCalendarFortvOS */,
+				FE90C8619F4DE0919CCBB7A4BD5A7FD4 /* WRCalendarFortvOS-WRCalendarViewFortvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -374,16 +574,73 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		509511122FADF5B662BA3B05EF489D7E /* Resources */ = {
+		3FA8F55BC92114E5D1B026F0DC95284C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539B782140B348DA199DF8150C1446D8 /* WRCalendarViewFortvOS.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659C983F7D2EA50A31F86846D699B005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37DD27F3C615BEC835756176D8BDD0F2 /* WRColumnHeader.xib in Resources */,
+				B5563FDFE567EB4372D53B5ABCE015EB /* WRCurrentTimeIndicator.xib in Resources */,
+				87F6B28B23C09213ED34C2B019F50140 /* WREventCell.xib in Resources */,
+				1A8D3DB48F0B5FE32C08D2F7F6F5921F /* WRRowHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		391401435F33FB0E88E17100F9A4CA05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65361875BF7EB22A3D3E58F2B7865FC0 /* Constants.swift in Sources */,
+				630DFC3FE9BF09DC8CD58B279AD524F7 /* Info.plist in Sources */,
+				12594A8D39596917BA0ABF2421FF1121 /* NSObjectExtension.swift in Sources */,
+				01AF57AFC0055B844D54AFCC1EEBD120 /* StringExtension.swift in Sources */,
+				0BEA8DAE03FB551DFAF6D00345BB6D6A /* UIColorExtention.swift in Sources */,
+				A7997124D1A924033565B8FB3F8D3CFA /* WRCalendarFortvOS-dummy.m in Sources */,
+				168ADAE7D72A93EB114993067A66CCEA /* WRColumnHeader.swift in Sources */,
+				196A1A88D23518DC39C6C1333A157F0C /* WRColumnHeader.xib in Sources */,
+				F5D2E9042C2D24D2976E72E10CE39283 /* WRColumnHeaderBackground.swift in Sources */,
+				B3A3542DF8E46FCB1F243E17AEEDBDBE /* WRCornerHeader.swift in Sources */,
+				2447F10D58B9326DAD2D5DEEB4953298 /* WRCurrentTimeGridline.swift in Sources */,
+				3B73C1CF2755CC7910C84C78B13512B8 /* WRCurrentTimeIndicator.swift in Sources */,
+				EC90B72DF211BB8111BD260F2C4957AA /* WRCurrentTimeIndicator.xib in Sources */,
+				66FC7B0534DF4DC9B8FD26DF8C99A462 /* WREvent.swift in Sources */,
+				664A2474C7697FA738B6C21342B4B731 /* WREventCell.swift in Sources */,
+				540F01E6B54D2E2BEBA7C3C0D9D46F08 /* WREventCell.xib in Sources */,
+				AE6008818BA867A434FBE50CED2247E3 /* WRGridLine.swift in Sources */,
+				1AC2B86FBFBA449EA907A6BC452C44D4 /* WRRowHeader.swift in Sources */,
+				6DF2266DFB5B8B85AE683C1663BAC94D /* WRRowHeader.xib in Sources */,
+				0D595D74174F11F7B4258C0DCF3B7588 /* WRRowHeaderBackground.swift in Sources */,
+				FDB19C15CE7305499585BFE13703C365 /* WRTodayBackground.swift in Sources */,
+				15377B8377D0207E4E08CFFCA94207D2 /* WRWeekView.swift in Sources */,
+				518F365848B9D7D09975105092B6E4D1 /* WRWeekViewFlowLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A5713E5185862CB6B523A1848B97A54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92F18E5EB6DA7E05CAE8A4D5DEBA2D1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41336B953259B836376AEA1CA627E22F /* Pods-WRCalendarFortvOS-Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC0412E536356508AEFA17702BF187E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -407,39 +664,101 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7A28497906053BEB7215A0EA03FB3C5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F40AA006598211E242AAE471E5920993 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				010BD966E94CF5280290EF94D8727230 /* Pods-WRCalendarFortvOS-Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B3B10E7D8192E7CA9EF8AB66AB79DD83 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "WRCalendarFortvOS-WRCalendarViewFortvOS";
-			target = D697708F26EFAFCCEECB0DFB48173C2F /* WRCalendarFortvOS-WRCalendarViewFortvOS */;
-			targetProxy = E017434DD65B59A135664436D6D39C84 /* PBXContainerItemProxy */;
-		};
-		B6E6B3036F57AC22900203E9A90142CA /* PBXTargetDependency */ = {
+		2862414F50BA1EC95101AC302BD9F7BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DateToolsSwift;
 			target = E89CFD99B895BCC6E8EDC2F95A03500C /* DateToolsSwift */;
-			targetProxy = 89987A28E0B9F34CAFD38BB858CFF0C2 /* PBXContainerItemProxy */;
+			targetProxy = C462D03E1B384811F4A48C7CF35478BD /* PBXContainerItemProxy */;
+		};
+		71224D50F4362C00CBE59BF57D76DFDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "WRCalendarFortvOS-WRCalendarViewFortvOS";
+			target = FE90C8619F4DE0919CCBB7A4BD5A7FD4 /* WRCalendarFortvOS-WRCalendarViewFortvOS */;
+			targetProxy = 3F759E41B8F85E07E738C7C98D82DD70 /* PBXContainerItemProxy */;
+		};
+		92C86906D84AFFF85C0FF4FCFE16F39C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WRCalendarFortvOS;
+			target = C4BC94E4D438D7CFFF59A48925BF868A /* WRCalendarFortvOS */;
+			targetProxy = 97CA262029CA7B5D2ABD078E828833A9 /* PBXContainerItemProxy */;
+		};
+		CD19D8B5CA751EE599AD9B7EE9DB2D70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DateToolsSwift;
+			target = E89CFD99B895BCC6E8EDC2F95A03500C /* DateToolsSwift */;
+			targetProxy = 924164D950CB699F35A0833EC28F459E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		115D643BA73ABB6A87488242A513B15E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FFAC680833A99ABDDBE9CE548B6DCF1 /* WRCalendarFortvOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WRCalendarFortvOS/WRCalendarFortvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WRCalendarFortvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WRCalendarFortvOS/WRCalendarFortvOS.modulemap";
+				PRODUCT_NAME = WRCalendarFortvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		36C5304B53F0444916F3BFC3A609EC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9728070AF91F489D570E5DF0FFD8DC5 /* Pods-WRCalendarFortvOS-Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WRCalendarFortvOS-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WRCalendarFortvOS_Example;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		50947B4F179D7F9E316B18EFF19F086E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -555,68 +874,6 @@
 			};
 			name = Release;
 		};
-		855D06F9C29665A272A4E2D379906DF4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9728070AF91F489D570E5DF0FFD8DC5 /* Pods-WRCalendarFortvOS-Example.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WRCalendarFortvOS-Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_WRCalendarFortvOS_Example;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.2;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		92C019D9294BA95CA0B5D7238C931AE0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/WRCalendarFortvOS";
-				INFOPLIST_FILE = "Target Support Files/WRCalendarFortvOS/ResourceBundle-WRCalendarViewFortvOS-Info.plist";
-				PRODUCT_NAME = WRCalendarViewFortvOS;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		A2B65982364BC4294B360A5AD85C2F8E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/WRCalendarFortvOS";
-				INFOPLIST_FILE = "Target Support Files/WRCalendarFortvOS/ResourceBundle-WRCalendarViewFortvOS-Info.plist";
-				PRODUCT_NAME = WRCalendarViewFortvOS;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		DB90742257326013CC43497C2BCF408E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C0E33EC0750CDD808E92C8999BF94F2 /* DateToolsSwift.xcconfig */;
@@ -645,6 +902,87 @@
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E860558DB56910749922791BCCD9FAFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A452C1E4F92FF67E447973FA6E59882 /* Pods-WRCalendarFortvOS-Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WRCalendarFortvOS-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_WRCalendarFortvOS_Example;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA7CBE9B937C998BBE8E8F67B1F95712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FFAC680833A99ABDDBE9CE548B6DCF1 /* WRCalendarFortvOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WRCalendarFortvOS/WRCalendarFortvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WRCalendarFortvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WRCalendarFortvOS/WRCalendarFortvOS.modulemap";
+				PRODUCT_NAME = WRCalendarFortvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4AD9F7C86DB928DC47F8154E6469D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FFAC680833A99ABDDBE9CE548B6DCF1 /* WRCalendarFortvOS.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/WRCalendarFortvOS";
+				INFOPLIST_FILE = "Target Support Files/WRCalendarFortvOS/ResourceBundle-WRCalendarViewFortvOS-Info.plist";
+				PRODUCT_NAME = WRCalendarViewFortvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -680,48 +1018,29 @@
 			};
 			name = Release;
 		};
-		FD4DF087B6733741548CA4C4CF9ED072 /* Debug */ = {
+		FFFCFECA00F3858AFC054423BB16C322 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A452C1E4F92FF67E447973FA6E59882 /* Pods-WRCalendarFortvOS-Example.debug.xcconfig */;
+			baseConfigurationReference = 3FFAC680833A99ABDDBE9CE548B6DCF1 /* WRCalendarFortvOS.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WRCalendarFortvOS-Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_WRCalendarFortvOS_Example;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/WRCalendarFortvOS";
+				INFOPLIST_FILE = "Target Support Files/WRCalendarFortvOS/ResourceBundle-WRCalendarViewFortvOS-Info.plist";
+				PRODUCT_NAME = WRCalendarViewFortvOS;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		060EDFFD7EE50A7652A4D1DAE5E54BCA /* Build configuration list for PBXNativeTarget "WRCalendarFortvOS-WRCalendarViewFortvOS" */ = {
+		0CB9CE2CB663BBE441BD7D57DD0C1E56 /* Build configuration list for PBXNativeTarget "Pods-WRCalendarFortvOS-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92C019D9294BA95CA0B5D7238C931AE0 /* Debug */,
-				A2B65982364BC4294B360A5AD85C2F8E /* Release */,
+				E860558DB56910749922791BCCD9FAFE /* Debug */,
+				36C5304B53F0444916F3BFC3A609EC7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -735,11 +1054,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1E97B58EC0C91E0B30955E28A0E1CAA /* Build configuration list for PBXNativeTarget "Pods-WRCalendarFortvOS-Example" */ = {
+		6B8AF5BD0DD4279744115FA0FB29D3DD /* Build configuration list for PBXNativeTarget "WRCalendarFortvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD4DF087B6733741548CA4C4CF9ED072 /* Debug */,
-				855D06F9C29665A272A4E2D379906DF4 /* Release */,
+				115D643BA73ABB6A87488242A513B15E /* Debug */,
+				EA7CBE9B937C998BBE8E8F67B1F95712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6B279FCD4FB3ACBB6B7A6E3590639C8 /* Build configuration list for PBXNativeTarget "WRCalendarFortvOS-WRCalendarViewFortvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AD9F7C86DB928DC47F8154E6469D7E /* Debug */,
+				FFFCFECA00F3858AFC054423BB16C322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

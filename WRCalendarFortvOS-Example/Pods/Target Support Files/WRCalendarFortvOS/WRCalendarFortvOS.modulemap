@@ -1,0 +1,6 @@
+framework module WRCalendarFortvOS {
+  umbrella header "WRCalendarFortvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
