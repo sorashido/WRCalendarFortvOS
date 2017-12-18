@@ -89,8 +89,6 @@ public class WRWeekView: UIView {
         //cell
         collectionView.register(UINib.init(nibName: WREventCell.className, bundle: bundle),
                                 forCellWithReuseIdentifier: ReuseIdentifiers.defaultCell)
-//        collectionView.register(UINib.init(nibName: "WREventCell", bundle: nil),
-//                                forCellWithReuseIdentifier: "WREventCell")
 
         //supplementary
         collectionView.register(UINib.init(nibName: WRColumnHeader.className, bundle: bundle),
@@ -329,11 +327,10 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         let events = eventBySection[key]
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifiers.defaultCell, for: indexPath) as? WREventCell
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WREventCell", for: indexPath) as? WREventCell
         guard cell != nil else { fatalError() }
         guard events != nil else { fatalError() }
 
-//        cell!.event = events![indexPath.row]
+        cell!.event = events![indexPath.row]
         return cell!
     }
     
