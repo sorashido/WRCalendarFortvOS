@@ -28,9 +28,6 @@
                 <constraint firstAttribute="trailing" secondItem="Owi-pZ-Sje" secondAttribute="trailing" constant="3" id="Rge-wN-5BI"/>
                 <constraint firstItem="Owi-pZ-Sje" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="rOO-hv-cwa"/>
             </constraints>
-            <connections>
-                <outlet property="timeLbl" destination="Owi-pZ-Sje" id="j36-bM-xG7"/>
-            </connections>
             <point key="canvasLocation" x="34.5" y="54"/>
         </collectionReusableView>
     </objects>

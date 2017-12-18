@@ -8,7 +8,8 @@
 import UIKit
 
 class WRRowHeader: UICollectionReusableView {
-    @IBOutlet weak var timeLbl: UILabel!
+//    @IBOutlet weak var timeLbl: UILabel!
+    let timeLbl: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
     let dateFormatter = DateFormatter()
     let calendar = Calendar.current
     

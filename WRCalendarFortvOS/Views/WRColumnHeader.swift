@@ -10,9 +10,11 @@ import UIKit
 import DateToolsSwift
 
 class WRColumnHeader: UICollectionReusableView {
-    @IBOutlet weak var dayLbl: UILabel!
-    @IBOutlet weak var weekdayLbl: UILabel!
-    
+//    @IBOutlet weak var dayLbl: UILabel!
+//    @IBOutlet weak var weekdayLbl: UILabel!
+    let dayLbl: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    let weekdayLbl: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+
     let calendar = Calendar.current
     let dateFormatter = DateFormatter()
     

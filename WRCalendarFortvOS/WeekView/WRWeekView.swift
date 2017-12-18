@@ -11,7 +11,7 @@ import DateToolsSwift
 
 public protocol WRWeekViewDelegate: NSObjectProtocol  {
     func view(startDate: Date, interval: Int)
-    func tap(date: Date)
+//    func tap(date: Date)
     func selectEvent(_ event: WREvent)
 }
 
@@ -76,9 +76,9 @@ public class WRWeekView: UIView {
         
         registerViewClasses()
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
-        tapGesture.cancelsTouchesInView = false
-        addGestureRecognizer(tapGesture)
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
+//        tapGesture.cancelsTouchesInView = false
+//        addGestureRecognizer(tapGesture)
     }
     
     func registerViewClasses() {
@@ -122,16 +122,16 @@ public class WRWeekView: UIView {
         flowLayout.sectionWidth = (frame.width - flowLayout.rowHeaderWidth) / CGFloat(daysToShowOnScreen)
     }
     
-    @objc func tapHandler(_ recognizer: UITapGestureRecognizer) {
-        let point = recognizer.location(in: self)
-        
-        var components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: getDateForX(point.x))
-        let (hour, minute) = getDateForY(point.y)
-        components.hour = hour
-        components.minute = minute
-        
-        delegate?.tap(date: Calendar.current.date(from: components)!)
-    }
+//    @objc func tapHandler(_ recognizer: UITapGestureRecognizer) {
+//        let point = recognizer.location(in: self)
+//
+//        var components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: getDateForX(point.x))
+//        let (hour, minute) = getDateForY(point.y)
+//        components.hour = hour
+//        components.minute = minute
+//
+//        delegate?.tap(date: Calendar.current.date(from: components)!)
+//    }
     
     // MARK: - public actions
     public func setCalendarDate(_ date: Date, animated: Bool = false) {
@@ -217,7 +217,6 @@ public class WRWeekView: UIView {
             self.forceReload(false)
             self.setCurrentPage(self.currentPage, animated: animated)
             
-            // 처음 화면이 보여지거나 schedule type이 바뀔때만 현재 시간 보여줌
             if self.isFirst {
                 self.flowLayout.scrollCollectionViewToCurrentTime()
                 self.isFirst = false
@@ -225,42 +224,41 @@ public class WRWeekView: UIView {
         }
     }
     
-    fileprivate func loadNextPage() {
-        guard !loading else { return }
-        DispatchQueue.main.async { [unowned self] in
-            self.loading = true
-            self.daysToShow = self.daysToShow + self.daysToShowOnScreen
-            self.forceReload(false)
-            self.loading = false
-        }
-    }
-    
-    fileprivate func loadPrevPage() {
-        guard !loading else { return }
-        DispatchQueue.main.async { [unowned self] in
-            self.loading = true
-            self.daysToShow = self.daysToShow + self.daysToShowOnScreen
-            self.initDate = self.initDate - self.daysToShowOnScreen.days
-            self.forceReload(false)
-            self.setCurrentPage(self.currentPage + 1, animated: false)
-            self.loading = false
-        }
-    }
-    
+//    fileprivate func loadNextPage() {
+//        guard !loading else { return }
+//        DispatchQueue.main.async { [unowned self] in
+//            self.loading = true
+//            self.daysToShow = self.daysToShow + self.daysToShowOnScreen
+//            self.forceReload(false)
+//            self.loading = false
+//        }
+//    }
+//
+//    fileprivate func loadPrevPage() {
+//        guard !loading else { return }
+//        DispatchQueue.main.async { [unowned self] in
+//            self.loading = true
+//            self.daysToShow = self.daysToShow + self.daysToShowOnScreen
+//            self.initDate = self.initDate - self.daysToShowOnScreen.days
+//            self.forceReload(false)
+//            self.setCurrentPage(self.currentPage + 1, animated: false)
+//            self.loading = false
+//        }
+//    }
+//
     fileprivate func setCurrentPage(_ _currentPage: Int, animated: Bool = true) {
         currentPage = _currentPage
         let pageWidth = CGFloat(daysToShowOnScreen) * flowLayout.sectionWidth
         if currentPage < 1 { currentPage = 1 }
-        
+
         collectionView.setContentOffset(CGPoint.init(x: pageWidth * CGFloat(currentPage - 1),
         y: collectionView.contentOffset.y),
                                         animated: animated)
-        
+
         delegate?.view(startDate: flowLayout.dateForColumnHeader(at: IndexPath(row: 0, section: (currentPage - 1) * daysToShowOnScreen)),
                        interval: daysToShowOnScreen)
     }
     
-    // directionalLockEnabled 이 제대로 작동안해서 직접 막아야 함
     fileprivate func determineScrollDirection() -> ScrollDirection {
         var scrollDirection: ScrollDirection
         
@@ -338,76 +336,72 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell!
     }
     
-//    public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        var view: UICollectionReusableView
-//
-//        if kind == SupplementaryViewKinds.columnHeader {
-//            let columnHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-//                                                                               withReuseIdentifier: ReuseIdentifiers.columnHeader,
-//                                                                               for: indexPath) as! WRColumnHeader
-//            columnHeader.date = flowLayout.dateForColumnHeader(at: indexPath)
-//            view = columnHeader
-//        } else if kind == SupplementaryViewKinds.rowHeader {
-//            let rowHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-//                                                                            withReuseIdentifier: ReuseIdentifiers.rowHeader,
-//                                                                            for: indexPath) as! WRRowHeader
-//            rowHeader.date = flowLayout.dateForTimeRowHeader(at: indexPath)
-//            view = rowHeader
-//        } else {
-//            view = UICollectionReusableView()
-//        }
-//        return view
-//    }
+    public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        var view: UICollectionReusableView
 
-    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        initialContentOffset = scrollView.contentOffset
-    }
-    
-    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        // y방향 스크롤시에는 페이징 불필요
-        if velocity.x == 0 && velocity.y != 0 { return }
-        
-        targetContentOffset.pointee = scrollView.contentOffset
-        let pageWidth = CGFloat(daysToShowOnScreen) * flowLayout.sectionWidth
-        var assistanceOffset: CGFloat = pageWidth / 3.0
-        
-        if velocity.x < 0 {
-            assistanceOffset = -assistanceOffset
+        if kind == SupplementaryViewKinds.columnHeader {
+            let columnHeader = collectionView.dequeueReusableSupplementaryView(ofKind:kind,withReuseIdentifier:ReuseIdentifiers.columnHeader,for: indexPath)// as! WRColumnHeader
+//            columnHeader.date = flowLayout.dateForColumnHeader(at: indexPath)
+            view = columnHeader
+        } else if kind == SupplementaryViewKinds.rowHeader {
+            let rowHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ReuseIdentifiers.rowHeader, for: indexPath)// as! WRRowHeader
+//            rowHeader.date = flowLayout.dateForTimeRowHeader(at: indexPath)
+            view = rowHeader
+        } else {
+            view = UICollectionReusableView()
         }
-        
-        let assistedScrollPosition = (scrollView.contentOffset.x + assistanceOffset) / pageWidth
-        let currentPage = Int(round(assistedScrollPosition)) + 1
-        
-        setCurrentPage(currentPage)
+        return view
     }
-    
-    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        if currentPage < Int(pageCount / 2) {
-            loadPrevPage()
-        }
-    }
-    
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollDirection = determineScrollDirectionAxis()
-        var newOffset: CGPoint
-        
-        if scrollDirection != .vertical && scrollDirection != .horizontal {
-            if abs(scrollView.contentOffset.x) > abs(scrollView.contentOffset.y) {
-                newOffset = CGPoint(x: scrollView.contentOffset.x, y: initialContentOffset.y);
-            } else {
-                newOffset = CGPoint(x: initialContentOffset.x, y: scrollView.contentOffset.y);
-            }
-            scrollView.contentOffset = newOffset
-        }
-        
-        let currentOffset = scrollView.contentOffset.x
-        let maximumOffset = scrollView.contentSize.width - scrollView.frame.width
-        let diff: CGFloat = 50
-        
-        if maximumOffset - currentOffset <= diff {
-            loadNextPage()
-        }
-    }
+
+//    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+//        initialContentOffset = scrollView.contentOffset
+//    }
+//
+//    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        // y방향 스크롤시에는 페이징 불필요
+//        if velocity.x == 0 && velocity.y != 0 { return }
+//
+//        targetContentOffset.pointee = scrollView.contentOffset
+//        let pageWidth = CGFloat(daysToShowOnScreen) * flowLayout.sectionWidth
+//        var assistanceOffset: CGFloat = pageWidth / 3.0
+//
+//        if velocity.x < 0 {
+//            assistanceOffset = -assistanceOffset
+//        }
+//
+//        let assistedScrollPosition = (scrollView.contentOffset.x + assistanceOffset) / pageWidth
+//        let currentPage = Int(round(assistedScrollPosition)) + 1
+//
+//        setCurrentPage(currentPage)
+//    }
+//
+//    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+//        if currentPage < Int(pageCount / 2) {
+//            loadPrevPage()
+//        }
+//    }
+//
+//    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let scrollDirection = determineScrollDirectionAxis()
+//        var newOffset: CGPoint
+//
+//        if scrollDirection != .vertical && scrollDirection != .horizontal {
+//            if abs(scrollView.contentOffset.x) > abs(scrollView.contentOffset.y) {
+//                newOffset = CGPoint(x: scrollView.contentOffset.x, y: initialContentOffset.y);
+//            } else {
+//                newOffset = CGPoint(x: initialContentOffset.x, y: scrollView.contentOffset.y);
+//            }
+//            scrollView.contentOffset = newOffset
+//        }
+//
+//        let currentOffset = scrollView.contentOffset.x
+//        let maximumOffset = scrollView.contentSize.width - scrollView.frame.width
+//        let diff: CGFloat = 50
+//
+//        if maximumOffset - currentOffset <= diff {
+//            loadNextPage()
+//        }
+//    }
 }
 
 extension WRWeekView: WRWeekViewFlowLayoutDelegate {
