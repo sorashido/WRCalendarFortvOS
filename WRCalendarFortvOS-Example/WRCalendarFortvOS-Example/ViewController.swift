@@ -43,10 +43,6 @@ extension MainCont: WRWeekViewDelegate {
         print(startDate, interval)
     }
     
-//    func tap(date: Date) {
-//        print(date)
-//    }
-    
     func selectEvent(_ event: WREvent) {
         print(event.title)
     }

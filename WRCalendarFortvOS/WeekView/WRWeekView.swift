@@ -11,7 +11,6 @@ import DateToolsSwift
 
 public protocol WRWeekViewDelegate: NSObjectProtocol  {
     func view(startDate: Date, interval: Int)
-//    func tap(date: Date)
     func selectEvent(_ event: WREvent)
 }
 
@@ -75,10 +74,6 @@ public class WRWeekView: UIView {
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[collectionView]|", options: [], metrics: nil, views: views))
         
         registerViewClasses()
-        
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
-//        tapGesture.cancelsTouchesInView = false
-//        addGestureRecognizer(tapGesture)
     }
     
     func registerViewClasses() {
@@ -121,17 +116,6 @@ public class WRWeekView: UIView {
         super.layoutSubviews()
         flowLayout.sectionWidth = (frame.width - flowLayout.rowHeaderWidth) / CGFloat(daysToShowOnScreen)
     }
-    
-//    @objc func tapHandler(_ recognizer: UITapGestureRecognizer) {
-//        let point = recognizer.location(in: self)
-//
-//        var components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: getDateForX(point.x))
-//        let (hour, minute) = getDateForY(point.y)
-//        components.hour = hour
-//        components.minute = minute
-//
-//        delegate?.tap(date: Calendar.current.date(from: components)!)
-//    }
     
     // MARK: - public actions
     public func setCalendarDate(_ date: Date, animated: Bool = false) {
@@ -363,7 +347,7 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        // y방향 스크롤시에는 페이징 불필요
+
         if velocity.x == 0 && velocity.y != 0 { return }
 
         targetContentOffset.pointee = scrollView.contentOffset
