@@ -328,9 +328,8 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         let key = dateFormatter.string(from: date)
         let events = eventBySection[key]
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifiers.defaultCell,for: indexPath) as? WREventCell
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentivenfier: "WREventCell",
-//                                                      for: indexPath) as? WREventCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifiers.defaultCell, for: indexPath) as? WREventCell
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WREventCell", for: indexPath) as? WREventCell
         guard cell != nil else { fatalError() }
         guard events != nil else { fatalError() }
 
