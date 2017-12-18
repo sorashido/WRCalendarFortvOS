@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		1A8D3DB48F0B5FE32C08D2F7F6F5921F /* WRRowHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565D0AF5D463558A7E49C5EBD4EC2DB3 /* WRRowHeader.xib */; };
 		1AC2B86FBFBA449EA907A6BC452C44D4 /* WRRowHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D3AD2625361308C39CCB1367870CB /* WRRowHeader.swift */; };
 		1B456E4E83D6D77B36869B0F3929AC00 /* DateToolsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0153450D8B86EDB33FEA73CCC2E4E6AC /* DateToolsSwift.framework */; };
-		20850E04C0EFD3193809BA445161FF7B /* WRCalendarFortvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D55E4BD445F0E89E7667624AF8728C /* WRCalendarFortvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2447F10D58B9326DAD2D5DEEB4953298 /* WRCurrentTimeGridline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18686BEBDF1F64B32446BB8987103DC2 /* WRCurrentTimeGridline.swift */; };
 		2BC39A33E21B7A8820E4B2FE48723FB5 /* DateToolsSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0E09110CCD2B661554BCFC8ED4BDAD /* DateToolsSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37DD27F3C615BEC835756176D8BDD0F2 /* WRColumnHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE45445BB0A5E143CCA57E1D6BF76587 /* WRColumnHeader.xib */; };
@@ -52,6 +51,7 @@
 		B3A3542DF8E46FCB1F243E17AEEDBDBE /* WRCornerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AF22E279FFEE99FFDD82F034410E4 /* WRCornerHeader.swift */; };
 		B3AAF9B931962AA6E1FC36FD1AE4B329 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941F48E785CC1F1EBF115B18231B073A /* Foundation.framework */; };
 		B5563FDFE567EB4372D53B5ABCE015EB /* WRCurrentTimeIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8DA59F91352E600AC6A791D14972C6D /* WRCurrentTimeIndicator.xib */; };
+		BF33C9D51FE78749002417CD /* WRCalendarFortvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D55E4BD445F0E89E7667624AF8728C /* WRCalendarFortvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF7B3B4C1BBE1583D92039B1539CF6C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941F48E785CC1F1EBF115B18231B073A /* Foundation.framework */; };
 		C0BA12E6FF13BCD3D8129522B3BC6ACF /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F4EBA06BB302DB79CE4DEB920A6FB4F /* DateTools.bundle */; };
 		DA770B19AF7C2D1F934DE2A5CD6C617C /* TimeChunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07550D2FBBC52A0EBD7FC4D7108CC7A /* TimeChunk.swift */; };
@@ -96,7 +96,7 @@
 
 /* Begin PBXFileReference section */
 		0153450D8B86EDB33FEA73CCC2E4E6AC /* DateToolsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateToolsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		01A66D3823D4E75BC223B3B8865EC312 /* WRCalendarViewFortvOS.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WRCalendarViewFortvOS.bundle; path = WRCalendarViewFortvOS.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A66D3823D4E75BC223B3B8865EC312 /* WRCalendarViewFortvOS.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WRCalendarViewFortvOS.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		088A1CF265C6890631FB357A32402995 /* WRGridLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRGridLine.swift; sourceTree = "<group>"; };
 		0AD7B3EF33737274BC5BBFACAE9E2D4A /* Pods-WRCalendarFortvOS-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WRCalendarFortvOS-Example-dummy.m"; sourceTree = "<group>"; };
 		1345B2F5A79463421EC72CA18D60B095 /* WRColumnHeaderBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRColumnHeaderBackground.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		2F4EBA06BB302DB79CE4DEB920A6FB4F /* DateTools.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = DateToolsSwift/DateTools/DateTools.bundle; sourceTree = "<group>"; };
 		2F5676A7EC3122300F579D0AF6285DBD /* WRCalendarFortvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WRCalendarFortvOS-umbrella.h"; sourceTree = "<group>"; };
 		385B1A1972A1EE479BF9C9FC78F3F42D /* Pods-WRCalendarFortvOS-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WRCalendarFortvOS-Example-resources.sh"; sourceTree = "<group>"; };
-		3897E3D818383939699C990596D09764 /* Pods-WRCalendarFortvOS-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WRCalendarFortvOS-Example.modulemap"; sourceTree = "<group>"; };
+		3897E3D818383939699C990596D09764 /* Pods-WRCalendarFortvOS-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WRCalendarFortvOS-Example.modulemap"; sourceTree = "<group>"; };
 		3A452C1E4F92FF67E447973FA6E59882 /* Pods-WRCalendarFortvOS-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRCalendarFortvOS-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3BB4B2213DA926E520C9AAA425E3AE24 /* Enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = DateToolsSwift/DateTools/Enums.swift; sourceTree = "<group>"; };
 		3BEF7C8149B26823EF989D664632D3DB /* Date+Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Format.swift"; path = "DateToolsSwift/DateTools/Date+Format.swift"; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		622D7F96DC4D848CFD40A0FCC72B9509 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652AF22E279FFEE99FFDD82F034410E4 /* WRCornerHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRCornerHeader.swift; sourceTree = "<group>"; };
 		6984433BE935E9D1ED4AAAD201EAFF11 /* WREventCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WREventCell.xib; sourceTree = "<group>"; };
-		6A402D83D4E6C72FE739ADD43BD15288 /* WRCalendarFortvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WRCalendarFortvOS.framework; path = WRCalendarFortvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A402D83D4E6C72FE739ADD43BD15288 /* WRCalendarFortvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WRCalendarFortvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DC352AD5EA2C3BA2AAF1ADE28628BB /* Pods-WRCalendarFortvOS-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WRCalendarFortvOS-Example-frameworks.sh"; sourceTree = "<group>"; };
 		75D55E4BD445F0E89E7667624AF8728C /* WRCalendarFortvOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WRCalendarFortvOS.h; path = WRCalendarFortvOS/WRCalendarFortvOS.h; sourceTree = "<group>"; };
 		787E70ECB80E5C5667A764171623F88D /* TimePeriodCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePeriodCollection.swift; path = DateToolsSwift/DateTools/TimePeriodCollection.swift; sourceTree = "<group>"; };
@@ -133,15 +133,15 @@
 		831316576C99BD0C02D31EC1F30DECDA /* Date+Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Bundle.swift"; path = "DateToolsSwift/DateTools/Date+Bundle.swift"; sourceTree = "<group>"; };
 		84EFCC07FBA8F36EEAB90A7D71F0967F /* UIColorExtention.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
 		8E02135F190582F5AFC385483E056C87 /* TimePeriod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePeriod.swift; path = DateToolsSwift/DateTools/TimePeriod.swift; sourceTree = "<group>"; };
-		90D3B295955F08BDA5DC4BAC3967BF09 /* DateToolsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DateToolsSwift.framework; path = DateToolsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		90D3B295955F08BDA5DC4BAC3967BF09 /* DateToolsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DateToolsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		941F48E785CC1F1EBF115B18231B073A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9C0E33EC0750CDD808E92C8999BF94F2 /* DateToolsSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DateToolsSwift.xcconfig; sourceTree = "<group>"; };
 		A270447559B74F749150292BFBE0E1D3 /* WRCurrentTimeIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRCurrentTimeIndicator.swift; sourceTree = "<group>"; };
 		A310EB62602BC96A86F67F6DD80DBD32 /* DateToolsSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DateToolsSwift-dummy.m"; sourceTree = "<group>"; };
-		A9C62A0363E2D463B58E679F5F94E792 /* Pods_WRCalendarFortvOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WRCalendarFortvOS_Example.framework; path = "Pods-WRCalendarFortvOS-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C62A0363E2D463B58E679F5F94E792 /* Pods_WRCalendarFortvOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRCalendarFortvOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1FDDB5A3052469206337EBC6ED6060 /* Date+Manipulations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Manipulations.swift"; path = "DateToolsSwift/DateTools/Date+Manipulations.swift"; sourceTree = "<group>"; };
-		AE77490D4F6B0EFD29C0B9A034DB8F13 /* WRCalendarFortvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WRCalendarFortvOS.modulemap; sourceTree = "<group>"; };
+		AE77490D4F6B0EFD29C0B9A034DB8F13 /* WRCalendarFortvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WRCalendarFortvOS.modulemap; sourceTree = "<group>"; };
 		AE89B821EEADA78544220613013B9BF3 /* WRRowHeaderBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRRowHeaderBackground.swift; sourceTree = "<group>"; };
 		AFA76A57F93D9EF4C024C3EF943E33B2 /* Date+Comparators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Comparators.swift"; path = "DateToolsSwift/DateTools/Date+Comparators.swift"; sourceTree = "<group>"; };
 		B12BE95963D7E2CD63ECF57DD5B0F55F /* Date+Inits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Inits.swift"; path = "DateToolsSwift/DateTools/Date+Inits.swift"; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		DAD0A1CA5479A41E69B4BE3519C5587A /* WRTodayBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WRTodayBackground.swift; sourceTree = "<group>"; };
 		DE45445BB0A5E143CCA57E1D6BF76587 /* WRColumnHeader.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WRColumnHeader.xib; sourceTree = "<group>"; };
 		E302E33186CC481DD8AC967EBC65A5F7 /* Date+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Components.swift"; path = "DateToolsSwift/DateTools/Date+Components.swift"; sourceTree = "<group>"; };
-		E94AA91A66F964E0B1E261A3AAFF11C4 /* DateToolsSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DateToolsSwift.modulemap; sourceTree = "<group>"; };
+		E94AA91A66F964E0B1E261A3AAFF11C4 /* DateToolsSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DateToolsSwift.modulemap; sourceTree = "<group>"; };
 		EE17FF2B7FD718091464219F7AAB0B2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F07550D2FBBC52A0EBD7FC4D7108CC7A /* TimeChunk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeChunk.swift; path = DateToolsSwift/DateTools/TimeChunk.swift; sourceTree = "<group>"; };
 		F82B4F1754658DF5CE5A72401BBEA0ED /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -381,7 +381,6 @@
 				0D31EA2478C3C0D46348831841CD9E01 /* Resources */,
 				354C1C5E8C039A375690649CBCF734EB /* Support Files */,
 			);
-			name = DateToolsSwift;
 			path = DateToolsSwift;
 			sourceTree = "<group>";
 		};
@@ -447,7 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7252C97FF16546A130F16DAD5FDB5FC6 /* WRCalendarFortvOS-umbrella.h in Headers */,
-				20850E04C0EFD3193809BA445161FF7B /* WRCalendarFortvOS.h in Headers */,
+				BF33C9D51FE78749002417CD /* WRCalendarFortvOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -327,12 +327,11 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         let events = eventBySection[key]
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifiers.defaultCell,
-                                                      for: indexPath) as? WREventCell
+                                                      for: indexPath) as? UICollectionViewCell//WREventCell
         guard cell != nil else { fatalError() }
         guard events != nil else { fatalError() }
 
-        cell!.event = events![indexPath.row]
-
+//        cell!.event = events![indexPath.row]
         return cell!
     }
     
@@ -340,13 +339,20 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         var view: UICollectionReusableView
 
         if kind == SupplementaryViewKinds.columnHeader {
-            let columnHeader = collectionView.dequeueReusableSupplementaryView(ofKind:kind,withReuseIdentifier:ReuseIdentifiers.columnHeader,for: indexPath)// as! WRColumnHeader
-//            columnHeader.date = flowLayout.dateForColumnHeader(at: indexPath)
-            view = columnHeader
+            if let columnHeader = collectionView.dequeueReusableSupplementaryView(ofKind:kind,withReuseIdentifier:ReuseIdentifiers.columnHeader,for: indexPath) as? WRColumnHeader{
+                columnHeader.date = flowLayout.dateForColumnHeader(at: indexPath)
+                view = columnHeader// as? UICollectionReusableView
+            }else{
+                view = collectionView.dequeueReusableSupplementaryView(ofKind:kind,withReuseIdentifier:
+                    ReuseIdentifiers.columnHeader,for: indexPath)
+            }
         } else if kind == SupplementaryViewKinds.rowHeader {
-            let rowHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ReuseIdentifiers.rowHeader, for: indexPath)// as! WRRowHeader
-//            rowHeader.date = flowLayout.dateForTimeRowHeader(at: indexPath)
-            view = rowHeader
+            if let rowHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ReuseIdentifiers.rowHeader, for: indexPath) as? WRRowHeader{
+                rowHeader.date = flowLayout.dateForTimeRowHeader(at: indexPath)
+                view = rowHeader
+            }else{
+                view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ReuseIdentifiers.rowHeader, for: indexPath)
+            }
         } else {
             view = UICollectionReusableView()
         }
