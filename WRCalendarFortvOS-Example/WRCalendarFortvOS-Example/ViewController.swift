@@ -20,11 +20,11 @@ class MainCont: UIViewController {
         
         //add events
         weekView.addEvent(event: WREvent.make(date: Date(), chunk: 2.hours, title: "#1"))
-//        weekView.addEvent(event: WREvent.make(date: Date(), chunk: 1.hours, title: "#2"))
-//        weekView.addEvent(event: WREvent.make(date: Date().add(90.minutes), chunk: 1.hours, title: "#3"))
-//        weekView.addEvent(event: WREvent.make(date: Date().add(110.minutes), chunk: 1.hours, title: "#4"))
-//
-//        weekView.addEvent(event: WREvent.make(date: Date().add(1.days), chunk: 1.hours, title: "tomorrow"))
+        weekView.addEvent(event: WREvent.make(date: Date(), chunk: 1.hours, title: "#2"))
+        weekView.addEvent(event: WREvent.make(date: Date().add(90.minutes), chunk: 1.hours, title: "#3"))
+        weekView.addEvent(event: WREvent.make(date: Date().add(110.minutes), chunk: 1.hours, title: "#4"))
+
+        weekView.addEvent(event: WREvent.make(date: Date().add(1.days), chunk: 1.hours, title: "tomorrow"))
     }
 
     override func didReceiveMemoryWarning() {
