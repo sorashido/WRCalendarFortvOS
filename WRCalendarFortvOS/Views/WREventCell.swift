@@ -9,10 +9,8 @@
 import UIKit
 
 class WREventCell: UICollectionViewCell {
-//    @IBOutlet weak var borderView: UIView!
-//    @IBOutlet weak var titleLabel: UILabel!
-    let titleLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-    let borderView = UIView(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var borderView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

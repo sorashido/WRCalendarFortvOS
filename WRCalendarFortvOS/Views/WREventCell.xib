@@ -52,6 +52,10 @@
                 <constraint firstAttribute="trailing" secondItem="SvP-El-S0W" secondAttribute="trailing" id="sYy-j0-Nye"/>
             </constraints>
             <size key="customSize" width="183" height="168"/>
+            <connections>
+                <outlet property="borderView" destination="ySO-rT-ELe" id="3XY-0p-88O"/>
+                <outlet property="titleLabel" destination="SvP-El-S0W" id="TVD-Mg-ObO"/>
+            </connections>
             <point key="canvasLocation" x="-32.5" y="113"/>
         </collectionViewCell>
     </objects>
