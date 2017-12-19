@@ -245,7 +245,7 @@ public class WRWeekView: UIView {
     
     fileprivate func determineScrollDirection() -> ScrollDirection {
         var scrollDirection: ScrollDirection
-        
+
         if initialContentOffset.x != collectionView.contentOffset.x &&
             initialContentOffset.y != collectionView.contentOffset.y {
             scrollDirection = .crazy

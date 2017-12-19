@@ -25,6 +25,12 @@ class MainCont: UIViewController {
         weekView.addEvent(event: WREvent.make(date: Date().add(110.minutes), chunk: 1.hours, title: "#4"))
 
         weekView.addEvent(event: WREvent.make(date: Date().add(1.days), chunk: 1.hours, title: "tomorrow"))
+        weekView.addEvent(event: WREvent.make(date: Date().add(1.days), chunk: 1.hours, title: "tomorrow"))
+        
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateFromFmt2 = fmt.date(from: "2017-12-20 7:00:00")
+        weekView.addEvent(event: WREvent.make(date: dateFromFmt2!, chunk: 1.hours, title: "tomorrow"))
     }
 
     override func didReceiveMemoryWarning() {

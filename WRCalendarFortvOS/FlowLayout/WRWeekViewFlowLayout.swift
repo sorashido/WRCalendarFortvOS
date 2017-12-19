@@ -28,16 +28,18 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
     var minuteHeight: CGFloat { return hourHeight / 60 }
     
     let displayHeaderBackgroundAtOrigin = true
-    let gridThickness: CGFloat = UIScreen.main.scale == 2 ? 0.5 : 1.0
+    let gridThickness: CGFloat = UIScreen.main.scale == 1 ? 0.5 : 1.0
     let minOverlayZ = 1000  // Allows for 900 items in a section without z overlap issues
     let minCellZ = 100      // Allows for 100 items in a section's background
     let minBackgroundZ = 0
-    
+    //TODO
+    let startTime = 7
+    let endTime = 20
     var maxSectionHeight: CGFloat { return columnHeaderHeight + hourHeight * 24 }
     var currentTimeIndicatorSize: CGSize { return CGSize(width: rowHeaderWidth, height: 10.0) }
     let sectionMargin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     let cellMargin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    let contentsMargin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    let contentsMargin = UIEdgeInsets(top: -490/*-startTime*hourHeight*/, left: 0, bottom: 0, right: 0)
     
     var delegate: WRWeekViewFlowLayoutDelegate?
     var currentTimeComponents: DateComponents {
@@ -87,9 +89,10 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     func initialize() {
-        hourHeight = 50
+        // TODO
+        hourHeight = 70
         rowHeaderWidth = 50
-        columnHeaderHeight = 50
+        columnHeaderHeight = 70
         hourGridDivisionValue = .minutes_20
         
         initializeMinuteTick()
@@ -163,7 +166,8 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
         let needsToPopulateVerticalGridlineAttributes = (verticalGridlineAttributes.count == 0)
         
         let sectionWidth = sectionMargin.left + self.sectionWidth + sectionMargin.right
-        let sectionHeight = nearbyint(hourHeight * 24 + sectionMargin.top + sectionMargin.bottom)
+        //TODO
+        let sectionHeight = nearbyint(hourHeight * CGFloat(endTime + 1) + sectionMargin.top + sectionMargin.bottom)
         let calendarGridMinX = rowHeaderWidth + contentsMargin.left
         let calendarGridMinY = columnHeaderHeight + contentsMargin.top
         let calendarGridWidth = collectionViewContentSize.width - rowHeaderWidth - contentsMargin.left - contentsMargin.right
@@ -187,10 +191,10 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
             layoutAttributesForDecorationView(at: IndexPath(row: 0, section: 0),
                                               ofKind: DecorationViewKinds.currentTimeIndicator,
                                               withItemCache: currentTimeIndicatorAttributes)
-        let timeY = calendarContentMinX + nearbyint(CGFloat(currentTimeComponents.hour!) * hourHeight
-            + CGFloat(currentTimeComponents.minute!) * minuteHeight)
+        // TODO
+        let timeY = calendarContentMinX + nearbyint(CGFloat(currentTimeComponents.hour! - startTime) * hourHeight + CGFloat(currentTimeComponents.minute! + 16) * minuteHeight)
         
-        let currentTimeIndicatorMinY: CGFloat = timeY - nearbyint(currentTimeIndicatorSize.height / 2.0)
+        let currentTimeIndicatorMinY: CGFloat = timeY //- nearbyint(currentTimeIndicatorSize.height / 2.0)
         let currentTimeIndicatorMinX: CGFloat = (max(collectionView!.contentOffset.x, 0.0) + (rowHeaderWidth - currentTimeIndicatorSize.width))
         attributes.frame = CGRect(origin: CGPoint(x: currentTimeIndicatorMinX, y: currentTimeIndicatorMinY),
                                                       size: currentTimeIndicatorSize)
@@ -228,12 +232,13 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
                                   size: CGSize.init(width: rowHeaderWidth, height: columnHeaderHeight))
         attributes.zIndex = zIndexForElementKind(DecorationViewKinds.cornerHeader)
 
-        // row header
-        for rowHeaderIndex in 8...20 {
+        // row headerの描画
+        for rowHeaderIndex in startTime...endTime {
             (attributes, rowHeaderAttributes) =
                 layoutAttributesForSupplemantaryView(at: IndexPath(item: rowHeaderIndex, section: 0),
                                                      ofKind: SupplementaryViewKinds.rowHeader,
                                                      withItemCache: rowHeaderAttributes)
+            //TODO
             let rowHeaderMinY = calendarContentMinY + hourHeight * CGFloat(rowHeaderIndex) - nearbyint(hourHeight / 2.0)
             attributes.frame = CGRect(x: rowHeaderMinX,
                                       y: rowHeaderMinY,
@@ -343,8 +348,8 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
         let calendarGridWidth = collectionViewContentSize.width - rowHeaderWidth - contentsMargin.left - contentsMargin.right
         var attributes = UICollectionViewLayoutAttributes()
         
-        //グリッドの描画
-        for hour in 8...20 {
+        //TODO グリッドの描画
+        for hour in startTime...endTime {
             (attributes, horizontalGridlineAttributes) =
                 layoutAttributesForDecorationView(at: IndexPath(item: horizontalGridlineIndex, section: 0),
                                                   ofKind: DecorationViewKinds.horizontalGridline,

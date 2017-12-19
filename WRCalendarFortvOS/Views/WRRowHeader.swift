@@ -9,7 +9,6 @@ import UIKit
 
 class WRRowHeader: UICollectionReusableView {
 
-//    @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var timeLbl: UILabel!
 
     let dateFormatter = DateFormatter()
@@ -22,7 +21,10 @@ class WRRowHeader: UICollectionReusableView {
 
     var date: Date? {
         didSet {
-            if let date = date,
+            if let date = date, calendar.component(.hour, from: date) == 7{
+                timeLbl.text = "all day"
+            }
+            else if let date = date,
                 calendar.component(.hour, from: date) != 0 && calendar.component(.hour, from: date) != 24 {
                 timeLbl.text = dateFormatter.string(from: date)
             } else {
