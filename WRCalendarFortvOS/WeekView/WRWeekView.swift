@@ -15,7 +15,7 @@ public protocol WRWeekViewDelegate: NSObjectProtocol  {
 }
 
 public class WRWeekView: UIView {
-    let pageCount = 7
+    let pageCount = 1
     let dateFormatter = DateFormatter()
     
     var collectionView: UICollectionView!
@@ -324,7 +324,7 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         if kind == SupplementaryViewKinds.columnHeader {
             if let columnHeader = collectionView.dequeueReusableSupplementaryView(ofKind:kind,withReuseIdentifier:ReuseIdentifiers.columnHeader,for: indexPath) as? WRColumnHeader{
                 columnHeader.date = flowLayout.dateForColumnHeader(at: indexPath)
-                view = columnHeader// as? UICollectionReusableView
+                view = columnHeader
             }else{
                 view = collectionView.dequeueReusableSupplementaryView(ofKind:kind,withReuseIdentifier:
                     ReuseIdentifiers.columnHeader,for: indexPath)
