@@ -16,25 +16,30 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLq-dm-tfe">
-                    <rect key="frame" x="28" y="7" width="54" height="27"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <rect key="frame" x="26" y="2" width="58" height="29"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9z-bN-EyV">
-                    <rect key="frame" x="41" y="38" width="29" height="14"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <rect key="frame" x="41" y="33" width="29" height="14"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="8ew-hf-hsZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="pLq-dm-tfe" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="7" id="VOe-Mr-CKe"/>
-                <constraint firstItem="Q9z-bN-EyV" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="haP-Ii-uD1"/>
+                <constraint firstItem="Q9z-bN-EyV" firstAttribute="centerX" secondItem="pLq-dm-tfe" secondAttribute="centerX" id="ATu-14-3Je"/>
+                <constraint firstItem="pLq-dm-tfe" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="2" id="VOe-Mr-CKe"/>
                 <constraint firstItem="pLq-dm-tfe" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="jHP-Ym-tbv"/>
-                <constraint firstAttribute="bottom" secondItem="Q9z-bN-EyV" secondAttribute="bottom" constant="6" id="mff-mn-Exd"/>
+                <constraint firstItem="Q9z-bN-EyV" firstAttribute="top" secondItem="pLq-dm-tfe" secondAttribute="bottom" constant="2" id="m4e-AM-Rlh"/>
+                <constraint firstItem="Q9z-bN-EyV" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="41" id="zyk-3u-UT0"/>
             </constraints>
             <connections>
                 <outlet property="dayLbl" destination="pLq-dm-tfe" id="rxo-Yw-NAf"/>

@@ -10,7 +10,7 @@ import UIKit
 class WRColumnHeaderBackground: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.clear//UIColor.white
     }
     
     required init?(coder aDecoder: NSCoder) {

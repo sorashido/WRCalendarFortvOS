@@ -28,11 +28,11 @@ class WRColumnHeader: UICollectionReusableView {
                 
                 dayLbl.text = String(calendar.component(.day, from: date))
                 weekdayLbl.text = dateFormatter.shortWeekdaySymbols[weekday].uppercased()
-                weekdayLbl.textColor = UIColor(hexString: "333333")
+                weekdayLbl.textColor = UIColor.white//UIColor(hexString: "333333")
 
                 if date.isSameDay(date: Date()) {
                     dayLbl.textColor = UIColor(hexString: "1398f2")
-                    backgroundColor = UIColor(hexString: "f5f8fd")
+                    backgroundColor = UIColor.clear//UIColor(hexString: "f5f8fd")
                 } else {
                     switch weekday {
                     case 0: // sunday
@@ -42,7 +42,7 @@ class WRColumnHeader: UICollectionReusableView {
                     default:
                         dayLbl.textColor = UIColor(hexString: "aaaaaa")
                     }
-                    backgroundColor = UIColor.white
+                    backgroundColor = UIColor.clear//UIColor.white
                 }
             }
         }
