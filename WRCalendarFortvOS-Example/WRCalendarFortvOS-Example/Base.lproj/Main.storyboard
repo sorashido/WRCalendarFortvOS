@@ -23,16 +23,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssv-Ui-WaR" customClass="WRWeekView" customModule="WRCalendarFortvOS">
-                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <rect key="frame" x="190" y="547" width="1540" height="376"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.078097574412822723" green="0.23325422406196594" blue="0.30072280764579773" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Ssv-Ui-WaR" secondAttribute="trailing" id="EiM-we-SAe"/>
-                            <constraint firstItem="Ssv-Ui-WaR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZnV-p1-oWp"/>
-                            <constraint firstItem="Ssv-Ui-WaR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fFp-9m-L9V"/>
-                            <constraint firstAttribute="bottom" secondItem="Ssv-Ui-WaR" secondAttribute="bottom" id="qDg-lF-PUt"/>
+                            <constraint firstAttribute="trailing" secondItem="Ssv-Ui-WaR" secondAttribute="trailing" constant="190" id="EiM-we-SAe"/>
+                            <constraint firstItem="Ssv-Ui-WaR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="190" id="ZnV-p1-oWp"/>
+                            <constraint firstItem="Ssv-Ui-WaR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="547" id="fFp-9m-L9V"/>
+                            <constraint firstAttribute="bottom" secondItem="Ssv-Ui-WaR" secondAttribute="bottom" constant="157" id="qDg-lF-PUt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>

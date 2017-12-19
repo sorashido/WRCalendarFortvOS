@@ -45,14 +45,14 @@ public enum HourGridDivision: Int {
     case minutes_30 = 30
 }
 
-enum ScrollDirection {
-    case none
-    case crazy
-    case left
-    case right
-    case up
-    case down
-    case horizontal
-    case vertical
-}
-
+//enum ScrollDirection {
+//    case none
+//    case crazy
+//    case left
+//    case right
+//    case up
+//    case down
+//    case horizontal
+//    case vertical
+//}
+//

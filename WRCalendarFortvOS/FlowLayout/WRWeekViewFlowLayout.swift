@@ -32,15 +32,14 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
     let minOverlayZ = 1000  // Allows for 900 items in a section without z overlap issues
     let minCellZ = 100      // Allows for 100 items in a section's background
     let minBackgroundZ = 0
-    //TODO
     let startTime = 7
     let endTime = 20
     var maxSectionHeight: CGFloat { return columnHeaderHeight + hourHeight * 24 }
     var currentTimeIndicatorSize: CGSize { return CGSize(width: rowHeaderWidth, height: 10.0) }
     let sectionMargin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     let cellMargin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    let contentsMargin = UIEdgeInsets(top: -490/*-startTime*hourHeight*/, left: 0, bottom: 0, right: 0)
-    
+
+    var contentsMargin: UIEdgeInsets!
     var delegate: WRWeekViewFlowLayoutDelegate?
     var currentTimeComponents: DateComponents {
         if (cachedCurrentTimeComponents[0] != nil) {
@@ -90,11 +89,13 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
     
     func initialize() {
         // TODO
-        hourHeight = 70
+        hourHeight = 60
         rowHeaderWidth = 50
-        columnHeaderHeight = 70
-        hourGridDivisionValue = .minutes_20
-        
+        columnHeaderHeight = 40
+        hourGridDivisionValue = .minutes_30
+
+        contentsMargin = UIEdgeInsets(top: CGFloat(-hourHeight) * CGFloat(startTime), left: 0, bottom: 0, right: 0)
+
         initializeMinuteTick()
     }
     
@@ -192,9 +193,9 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
                                               ofKind: DecorationViewKinds.currentTimeIndicator,
                                               withItemCache: currentTimeIndicatorAttributes)
         // TODO
-        let timeY = calendarContentMinX + nearbyint(CGFloat(currentTimeComponents.hour! - startTime) * hourHeight + CGFloat(currentTimeComponents.minute! + 16) * minuteHeight)
+        let timeY = calendarContentMinX + nearbyint(CGFloat(currentTimeComponents.hour! - startTime) * hourHeight + CGFloat(currentTimeComponents.minute!) * minuteHeight)
         
-        let currentTimeIndicatorMinY: CGFloat = timeY //- nearbyint(currentTimeIndicatorSize.height / 2.0)
+        let currentTimeIndicatorMinY: CGFloat = timeY - nearbyint(currentTimeIndicatorSize.height / 2.0)
         let currentTimeIndicatorMinX: CGFloat = (max(collectionView!.contentOffset.x, 0.0) + (rowHeaderWidth - currentTimeIndicatorSize.width))
         attributes.frame = CGRect(origin: CGPoint(x: currentTimeIndicatorMinX, y: currentTimeIndicatorMinY),
                                                       size: currentTimeIndicatorSize)
@@ -659,17 +660,14 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     // MARK: - Scroll
-    func scrollCollectionViewToCurrentTime() {
-        let y = max(0, min(CGFloat(Date().hour) * hourHeight - collectionView!.frame.height / 2 + columnHeaderHeight,
-                    collectionView!.contentSize.height - collectionView!.frame.height))
-        //didScroll에서 horizontal, vertical scroll이 동시에 되는 것을 막고 있음
-        //임시로 처음 current time찾아갈 때만 delegate를 무효화하도록 함
-        //더 나은 방법 찾을때까지 임시 유지
-        let tempDelegate = collectionView!.delegate
-        collectionView!.delegate = nil
-        self.collectionView!.contentOffset = CGPoint(x: self.collectionView!.contentOffset.x, y: y)
-        collectionView!.delegate = tempDelegate
-    }
+//    func scrollCollectionViewToCurrentTime() {
+//        let y = max(0, min(CGFloat(Date().hour) * hourHeight - collectionView!.frame.height / 2 + columnHeaderHeight,
+//                    collectionView!.contentSize.height - collectionView!.frame.height))
+//        let tempDelegate = collectionView!.delegate
+//        collectionView!.delegate = nil
+//        self.collectionView!.contentOffset = CGPoint(x: self.collectionView!.contentOffset.x, y: y)
+//        collectionView!.delegate = tempDelegate
+//    }
     
     // MARK: - Dates
     func dateForTimeRowHeader(at indexPath: IndexPath) -> Date {

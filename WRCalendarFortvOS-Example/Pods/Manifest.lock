@@ -1,6 +1,6 @@
 PODS:
   - DateToolsSwift (2.0.3)
-  - WRCalendarFortvOS (0.1.0):
+  - WRCalendarFortvOS (0.1.2):
     - DateToolsSwift
 
 DEPENDENCIES:
@@ -12,7 +12,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DateToolsSwift: bf69bf9056d9e53c5c03f06e51f219b9b8b02f9e
-  WRCalendarFortvOS: e83d09e874241e95699cf36d34de9f3824794fce
+  WRCalendarFortvOS: 2078527e749ecc4eb1525294eecedcd720447890
 
 PODFILE CHECKSUM: b565f3a564311f3c8125a9901c62f7961ee6f066
 

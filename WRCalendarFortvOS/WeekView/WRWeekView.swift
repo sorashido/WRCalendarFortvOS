@@ -202,7 +202,7 @@ public class WRWeekView: UIView {
             self.setCurrentPage(self.currentPage, animated: animated)
             
             if self.isFirst {
-                self.flowLayout.scrollCollectionViewToCurrentTime()
+//                self.flowLayout.scrollCollectionViewToCurrentTime()
                 self.isFirst = false
             }
         }
@@ -243,40 +243,40 @@ public class WRWeekView: UIView {
                        interval: daysToShowOnScreen)
     }
     
-    fileprivate func determineScrollDirection() -> ScrollDirection {
-        var scrollDirection: ScrollDirection
-
-        if initialContentOffset.x != collectionView.contentOffset.x &&
-            initialContentOffset.y != collectionView.contentOffset.y {
-            scrollDirection = .crazy
-        } else {
-            if initialContentOffset.x > collectionView.contentOffset.x {
-                scrollDirection = .left
-            } else if initialContentOffset.x < collectionView.contentOffset.x {
-                scrollDirection = .right
-            } else if initialContentOffset.y > collectionView.contentOffset.y {
-                scrollDirection = .up
-            } else if initialContentOffset.y < collectionView.contentOffset.y {
-                scrollDirection = .down
-            } else {
-                scrollDirection = .none
-            }
-        }
-        return scrollDirection
-    }
-    
-    fileprivate func determineScrollDirectionAxis() -> ScrollDirection {
-        let scrollDirection = determineScrollDirection()
-        
-        switch scrollDirection {
-        case .left, .right:
-            return .horizontal
-        case .up, .down:
-            return .vertical
-        default:
-            return .none
-        }
-    }
+//    fileprivate func determineScrollDirection() -> ScrollDirection {
+//        var scrollDirection: ScrollDirection
+//
+//        if initialContentOffset.x != collectionView.contentOffset.x &&
+//            initialContentOffset.y != collectionView.contentOffset.y {
+//            scrollDirection = .crazy
+//        } else {
+//            if initialContentOffset.x > collectionView.contentOffset.x {
+//                scrollDirection = .left
+//            } else if initialContentOffset.x < collectionView.contentOffset.x {
+//                scrollDirection = .right
+//            } else if initialContentOffset.y > collectionView.contentOffset.y {
+//                scrollDirection = .up
+//            } else if initialContentOffset.y < collectionView.contentOffset.y {
+//                scrollDirection = .down
+//            } else {
+//                scrollDirection = .none
+//            }
+//        }
+//        return scrollDirection
+//    }
+//
+//    fileprivate func determineScrollDirectionAxis() -> ScrollDirection {
+//        let scrollDirection = determineScrollDirection()
+//
+//        switch scrollDirection {
+//        case .left, .right:
+//            return .horizontal
+//        case .up, .down:
+//            return .vertical
+//        default:
+//            return .none
+//        }
+//    }
 }
 
 extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -342,55 +342,55 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         return view
     }
 
-    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        initialContentOffset = scrollView.contentOffset
-    }
-
-    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-
-        if velocity.x == 0 && velocity.y != 0 { return }
-
-        targetContentOffset.pointee = scrollView.contentOffset
-        let pageWidth = CGFloat(daysToShowOnScreen) * flowLayout.sectionWidth
-        var assistanceOffset: CGFloat = pageWidth / 3.0
-
-        if velocity.x < 0 {
-            assistanceOffset = -assistanceOffset
-        }
-
-        let assistedScrollPosition = (scrollView.contentOffset.x + assistanceOffset) / pageWidth
-        let currentPage = Int(round(assistedScrollPosition)) + 1
-
-        setCurrentPage(currentPage)
-    }
-
-    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        if currentPage < Int(pageCount / 2) {
-            loadPrevPage()
-        }
-    }
-
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollDirection = determineScrollDirectionAxis()
-        var newOffset: CGPoint
-
-        if scrollDirection != .vertical && scrollDirection != .horizontal {
-            if abs(scrollView.contentOffset.x) > abs(scrollView.contentOffset.y) {
-                newOffset = CGPoint(x: scrollView.contentOffset.x, y: initialContentOffset.y);
-            } else {
-                newOffset = CGPoint(x: initialContentOffset.x, y: scrollView.contentOffset.y);
-            }
-            scrollView.contentOffset = newOffset
-        }
-
-        let currentOffset = scrollView.contentOffset.x
-        let maximumOffset = scrollView.contentSize.width - scrollView.frame.width
-        let diff: CGFloat = 50
-
-        if maximumOffset - currentOffset <= diff {
-            loadNextPage()
-        }
-    }
+//    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+//        initialContentOffset = scrollView.contentOffset
+//    }
+//
+//    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//
+//        if velocity.x == 0 && velocity.y != 0 { return }
+//
+//        targetContentOffset.pointee = scrollView.contentOffset
+//        let pageWidth = CGFloat(daysToShowOnScreen) * flowLayout.sectionWidth
+//        var assistanceOffset: CGFloat = pageWidth / 3.0
+//
+//        if velocity.x < 0 {
+//            assistanceOffset = -assistanceOffset
+//        }
+//
+//        let assistedScrollPosition = (scrollView.contentOffset.x + assistanceOffset) / pageWidth
+//        let currentPage = Int(round(assistedScrollPosition)) + 1
+//
+//        setCurrentPage(currentPage)
+//    }
+//
+//    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+//        if currentPage < Int(pageCount / 2) {
+//            loadPrevPage()
+//        }
+//    }
+//
+//    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let scrollDirection = determineScrollDirectionAxis()
+//        var newOffset: CGPoint
+//
+//        if scrollDirection != .vertical && scrollDirection != .horizontal {
+//            if abs(scrollView.contentOffset.x) > abs(scrollView.contentOffset.y) {
+//                newOffset = CGPoint(x: scrollView.contentOffset.x, y: initialContentOffset.y);
+//            } else {
+//                newOffset = CGPoint(x: initialContentOffset.x, y: scrollView.contentOffset.y);
+//            }
+//            scrollView.contentOffset = newOffset
+//        }
+//
+//        let currentOffset = scrollView.contentOffset.x
+//        let maximumOffset = scrollView.contentSize.width - scrollView.frame.width
+//        let diff: CGFloat = 50
+//
+//        if maximumOffset - currentOffset <= diff {
+//            loadNextPage()
+//        }
+//    }
 }
 
 extension WRWeekView: WRWeekViewFlowLayoutDelegate {
