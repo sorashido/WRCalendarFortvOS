@@ -1,8 +1,8 @@
 {
   "name": "WRCalendarFortvOS",
-  "version": "0.0.1",
-  "summary": "A short description of WRCalendarFortvOS.",
-  "description": "WRCalendarFortvOS",
+  "version": "0.1.0",
+  "summary": "calendar for tvOS",
+  "description": "WRCalendarFortvOS is based on WRCalendar",
   "homepage": "https://github.com/sorashido/WRCalendarFortvOS",
   "license": "MIT",
   "authors": {
@@ -10,11 +10,11 @@
   },
   "source": {
     "git": "https://github.com/sorashido/WRCalendarFortvOS.git",
-    "tag": "0.0.1"
+    "tag": "v0.1.0"
   },
   "source_files": "WRCalendarFortvOS/**/*",
   "platforms": {
-    "tvos": "11.2"
+    "tvos": "11.0"
   },
   "resource_bundles": {
     "WRCalendarViewFortvOS": [
