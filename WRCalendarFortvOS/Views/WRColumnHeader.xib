@@ -15,19 +15,19 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLq-dm-tfe">
-                    <rect key="frame" x="35" y="2" width="40" height="20"/>
+                    <rect key="frame" x="17" y="2" width="77" height="39"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9z-bN-EyV">
-                    <rect key="frame" x="41" y="24" width="27" height="14"/>
+                    <rect key="frame" x="41" y="36" width="29" height="14"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="14" id="8ew-hf-hsZ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -37,7 +37,7 @@
                 <constraint firstItem="Q9z-bN-EyV" firstAttribute="centerX" secondItem="pLq-dm-tfe" secondAttribute="centerX" id="ATu-14-3Je"/>
                 <constraint firstItem="pLq-dm-tfe" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="2" id="VOe-Mr-CKe"/>
                 <constraint firstItem="pLq-dm-tfe" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="jHP-Ym-tbv"/>
-                <constraint firstItem="Q9z-bN-EyV" firstAttribute="top" secondItem="pLq-dm-tfe" secondAttribute="bottom" constant="2" id="m4e-AM-Rlh"/>
+                <constraint firstItem="Q9z-bN-EyV" firstAttribute="top" secondItem="pLq-dm-tfe" secondAttribute="bottom" constant="-5" id="m4e-AM-Rlh"/>
                 <constraint firstItem="Q9z-bN-EyV" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="41" id="zyk-3u-UT0"/>
             </constraints>
             <connections>

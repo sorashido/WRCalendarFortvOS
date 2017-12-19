@@ -89,9 +89,9 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
     
     func initialize() {
         // TODO
-        hourHeight = 60
+        hourHeight = 50
         rowHeaderWidth = 50
-        columnHeaderHeight = 40
+        columnHeaderHeight = 55
         hourGridDivisionValue = .minutes_30
 
         contentsMargin = UIEdgeInsets(top: CGFloat(-hourHeight) * CGFloat(startTime), left: 0, bottom: 0, right: 0)
