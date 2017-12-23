@@ -17,20 +17,19 @@ class MainCont: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupCalendarData()
+
+        let startDateArray:[String] = ["2017-12-18T10:00:00+09:00", "2017-12-19T08:50:00+09:00", "2017-12-20T10:30:00+09:00", "2017-12-21", "2017-12-21T13:30:00+09:00", "2017-12-20T13:30:00+09:00", "2017-12-22", "2017-12-23"]
+        let endDateArray: [String] = ["2017-12-18T15:00:00+09:00", "2017-12-19T12:00:00+09:00", "2017-12-20T12:00:00+09:00", "2017-12-27", "2017-12-21T14:30:00+09:00", "2017-12-20T16:00:00+09:00", "2017-12-23", "2017-12-24"]
+        let bodyArray: [String] = ["ゼミ", "プログラミング１（１０・１１）", "プログラミング１（１２）", "Symposium at Carlton University", "NICT MTG", "代議員会・教育研究評議会", "段ボール・紙ごみ回収", "天皇誕生日"]
         
         //add events
-        weekView.addEvent(event: WREvent.make(date: Date(), chunk: 2.hours, title: "#1"))
-        weekView.addEvent(event: WREvent.make(date: Date(), chunk: 1.hours, title: "#2"))
-        weekView.addEvent(event: WREvent.make(date: Date().add(90.minutes), chunk: 1.hours, title: "#3"))
-        weekView.addEvent(event: WREvent.make(date: Date().add(110.minutes), chunk: 1.hours, title: "#4"))
+        weekView.add1DayEvent(start: startDateArray[3], end: endDateArray[3], title: bodyArray[3])
+        weekView.add1DayEvent(start: startDateArray[6], end: endDateArray[6], title: bodyArray[6])
+        weekView.add1DayEvent(start: startDateArray[7], end: endDateArray[7], title: bodyArray[7])
 
-        weekView.addEvent(event: WREvent.make(date: Date().add(1.days), chunk: 1.hours, title: "tomorrow"))
-        weekView.addEvent(event: WREvent.make(date: Date().add(1.days), chunk: 1.hours, title: "tomorrow"))
-        
-        let fmt = DateFormatter()
-        fmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let dateFromFmt2 = fmt.date(from: "2017-12-20 7:00:00")
-        weekView.addEvent(event: WREvent.make(date: dateFromFmt2!, chunk: 1.hours, title: "tomorrow"))
+        for i in 0..<8{
+            weekView.addEvent(event: WREvent.make(start: startDateArray[i], end: endDateArray[i], title: bodyArray[i]))
+        }
     }
 
     override func didReceiveMemoryWarning() {

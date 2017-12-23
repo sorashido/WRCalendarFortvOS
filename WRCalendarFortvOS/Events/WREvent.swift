@@ -18,4 +18,15 @@ open class WREvent: TimePeriod {
         
         return event
     }
+    
+    open class func make(start:String, end:String, title: String) -> WREvent {
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        let startDate = dateformatter.date(from: start)
+        let endDate = dateformatter.date(from: end)
+        let event = WREvent(beginning: startDate, end: endDate)
+        event.title = title
+        
+        return event
+    }
 }

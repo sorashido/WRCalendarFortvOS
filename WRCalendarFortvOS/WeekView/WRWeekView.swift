@@ -133,6 +133,22 @@ public class WRWeekView: UIView {
         events.append(event)
         forceReload(true)
     }
+    //TODO: きちんと実装する
+    public func add1DayEvent(start: String, end: String, title: String){
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let startDate = fmt.date(from: start+" 7:00:00")
+        let endDate = fmt.date(from: end+" 7:00:00")
+        let uptoDate = ..<endDate!
+
+        var nextDate = startDate!
+        while(uptoDate.contains(nextDate)){
+            nextDate += TimeInterval.init(60*60*24)
+            let event  = WREvent.make(date: nextDate, chunk: 1.hours, title: title)
+            events.append(event)
+        }
+        forceReload(true)
+    }
     
     public func addEvents(events: [WREvent]) {
         self.events.append(contentsOf: events)
@@ -242,41 +258,6 @@ public class WRWeekView: UIView {
         delegate?.view(startDate: flowLayout.dateForColumnHeader(at: IndexPath(row: 0, section: (currentPage - 1) * daysToShowOnScreen)),
                        interval: daysToShowOnScreen)
     }
-    
-//    fileprivate func determineScrollDirection() -> ScrollDirection {
-//        var scrollDirection: ScrollDirection
-//
-//        if initialContentOffset.x != collectionView.contentOffset.x &&
-//            initialContentOffset.y != collectionView.contentOffset.y {
-//            scrollDirection = .crazy
-//        } else {
-//            if initialContentOffset.x > collectionView.contentOffset.x {
-//                scrollDirection = .left
-//            } else if initialContentOffset.x < collectionView.contentOffset.x {
-//                scrollDirection = .right
-//            } else if initialContentOffset.y > collectionView.contentOffset.y {
-//                scrollDirection = .up
-//            } else if initialContentOffset.y < collectionView.contentOffset.y {
-//                scrollDirection = .down
-//            } else {
-//                scrollDirection = .none
-//            }
-//        }
-//        return scrollDirection
-//    }
-//
-//    fileprivate func determineScrollDirectionAxis() -> ScrollDirection {
-//        let scrollDirection = determineScrollDirection()
-//
-//        switch scrollDirection {
-//        case .left, .right:
-//            return .horizontal
-//        case .up, .down:
-//            return .vertical
-//        default:
-//            return .none
-//        }
-//    }
 }
 
 extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -341,56 +322,6 @@ extension WRWeekView: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         return view
     }
-
-//    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-//        initialContentOffset = scrollView.contentOffset
-//    }
-//
-//    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//
-//        if velocity.x == 0 && velocity.y != 0 { return }
-//
-//        targetContentOffset.pointee = scrollView.contentOffset
-//        let pageWidth = CGFloat(daysToShowOnScreen) * flowLayout.sectionWidth
-//        var assistanceOffset: CGFloat = pageWidth / 3.0
-//
-//        if velocity.x < 0 {
-//            assistanceOffset = -assistanceOffset
-//        }
-//
-//        let assistedScrollPosition = (scrollView.contentOffset.x + assistanceOffset) / pageWidth
-//        let currentPage = Int(round(assistedScrollPosition)) + 1
-//
-//        setCurrentPage(currentPage)
-//    }
-//
-//    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-//        if currentPage < Int(pageCount / 2) {
-//            loadPrevPage()
-//        }
-//    }
-//
-//    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let scrollDirection = determineScrollDirectionAxis()
-//        var newOffset: CGPoint
-//
-//        if scrollDirection != .vertical && scrollDirection != .horizontal {
-//            if abs(scrollView.contentOffset.x) > abs(scrollView.contentOffset.y) {
-//                newOffset = CGPoint(x: scrollView.contentOffset.x, y: initialContentOffset.y);
-//            } else {
-//                newOffset = CGPoint(x: initialContentOffset.x, y: scrollView.contentOffset.y);
-//            }
-//            scrollView.contentOffset = newOffset
-//        }
-//
-//        let currentOffset = scrollView.contentOffset.x
-//        let maximumOffset = scrollView.contentSize.width - scrollView.frame.width
-//        let diff: CGFloat = 50
-//
-//        if maximumOffset - currentOffset <= diff {
-//            loadNextPage()
-//        }
-//    }
 }
 
 extension WRWeekView: WRWeekViewFlowLayoutDelegate {

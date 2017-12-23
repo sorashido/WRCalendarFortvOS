@@ -23,10 +23,6 @@ class WREventCell: UICollectionViewCell {
         updateColors()
     }
     
-    func setcontentViewColor(color: UIColor){
-        contentView.backgroundColor = color
-    }
-
     var event: WREvent? {
         didSet {
             if let event = event {
