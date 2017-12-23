@@ -27,13 +27,14 @@ class WREventCell: UICollectionViewCell {
         didSet {
             if let event = event {
                 titleLabel.text = event.title
+                contentView.backgroundColor = event.backgroundColor
             }
         }
     }
     
     func updateColors() {
-        contentView.backgroundColor = UIColor(hexString: "21729c")!.withAlphaComponent(0.5)//
-//        borderView.backgroundColor = UIColor(hexString: "21729c")!.withAlphaComponent(0.5)
+//        contentView.backgroundColor = UIColor(hexString: "21729c")!.withAlphaComponent(0.5)//
+//        borderView.backgroundColor = UIColor.red.withAlphaComponent(0.5)//UIColor(hexString: "21729c")!.withAlphaComponent(0.5)
         titleLabel.textColor = UIColor.white
     }
 }

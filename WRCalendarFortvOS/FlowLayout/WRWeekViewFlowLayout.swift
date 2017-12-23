@@ -26,14 +26,15 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
     var hourGridDivisionValue: HourGridDivision!
     
     var minuteHeight: CGFloat { return hourHeight / 60 }
-    
+
+    var startTime = 7
+    var endTime = 20
+
     let displayHeaderBackgroundAtOrigin = true
     let gridThickness: CGFloat = UIScreen.main.scale == 1 ? 0.5 : 1.0
     let minOverlayZ = 1000  // Allows for 900 items in a section without z overlap issues
     let minCellZ = 100      // Allows for 100 items in a section's background
     let minBackgroundZ = 0
-    let startTime = 7
-    let endTime = 20
     var maxSectionHeight: CGFloat { return columnHeaderHeight + hourHeight * 24 }
     var currentTimeIndicatorSize: CGSize { return CGSize(width: rowHeaderWidth, height: 10.0) }
     let sectionMargin = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -88,9 +89,8 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     func initialize() {
-        // TODO
         hourHeight = 50
-        rowHeaderWidth = 40
+        rowHeaderWidth = 45
         columnHeaderHeight = 55
         hourGridDivisionValue = .minutes_30
 

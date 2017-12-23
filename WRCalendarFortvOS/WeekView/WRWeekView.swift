@@ -117,6 +117,23 @@ public class WRWeekView: UIView {
         flowLayout.sectionWidth = (frame.width - flowLayout.rowHeaderWidth) / CGFloat(daysToShowOnScreen)
     }
     
+    public func setTime(startTime: Int, endTime: Int){
+        flowLayout.startTime = startTime
+        flowLayout.endTime = endTime
+    }
+    
+    public func setUIParams(hourHeight:CGFloat=50, rowHeaderWidth:CGFloat=45, columnHeaderHeight: CGFloat=55, sectionWidth: CGFloat=0, hourGridDivisionValue:HourGridDivision = .minutes_30){
+        flowLayout.hourHeight = hourHeight
+        flowLayout.rowHeaderWidth = rowHeaderWidth
+        flowLayout.columnHeaderHeight = columnHeaderHeight
+        flowLayout.sectionWidth = sectionWidth
+        flowLayout.hourGridDivisionValue = hourGridDivisionValue
+    }
+    
+    public func setMargin(margin: UIEdgeInsets){
+        flowLayout.contentsMargin = margin
+    }
+    
     // MARK: - public actions
     public func setCalendarDate(_ date: Date, animated: Bool = false) {
         calendarDate = date
@@ -134,7 +151,7 @@ public class WRWeekView: UIView {
         forceReload(true)
     }
     //TODO: きちんと実装する
-    public func add1DayEvent(start: String, end: String, title: String){
+    public func add1DayEvent(start: String, end: String, title: String, color: UIColor){
         let fmt = DateFormatter()
         fmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let startDate = fmt.date(from: start+" 7:00:00")
@@ -142,11 +159,11 @@ public class WRWeekView: UIView {
         let uptoDate = ..<endDate!
 
         var nextDate = startDate!
-        while(uptoDate.contains(nextDate)){
-            nextDate += TimeInterval.init(60*60*24)
-            let event  = WREvent.make(date: nextDate, chunk: 1.hours, title: title)
+        repeat {
+            let event  = WREvent.make(date: nextDate, chunk: 1.hours, title: title, color: color)
             events.append(event)
-        }
+            nextDate += TimeInterval.init(60*60*24)
+        } while uptoDate.contains(nextDate)
         forceReload(true)
     }
     
@@ -218,34 +235,11 @@ public class WRWeekView: UIView {
             self.setCurrentPage(self.currentPage, animated: animated)
             
             if self.isFirst {
-//                self.flowLayout.scrollCollectionViewToCurrentTime()
                 self.isFirst = false
             }
         }
     }
     
-    fileprivate func loadNextPage() {
-        guard !loading else { return }
-        DispatchQueue.main.async { [unowned self] in
-            self.loading = true
-            self.daysToShow = self.daysToShow + self.daysToShowOnScreen
-            self.forceReload(false)
-            self.loading = false
-        }
-    }
-
-    fileprivate func loadPrevPage() {
-        guard !loading else { return }
-        DispatchQueue.main.async { [unowned self] in
-            self.loading = true
-            self.daysToShow = self.daysToShow + self.daysToShowOnScreen
-            self.initDate = self.initDate - self.daysToShowOnScreen.days
-            self.forceReload(false)
-            self.setCurrentPage(self.currentPage + 1, animated: false)
-            self.loading = false
-        }
-    }
-
     fileprivate func setCurrentPage(_ _currentPage: Int, animated: Bool = true) {
         currentPage = _currentPage
         let pageWidth = CGFloat(daysToShowOnScreen) * flowLayout.sectionWidth

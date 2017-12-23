@@ -18,7 +18,6 @@ class WRColumnHeader: UICollectionReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        dateFormatter.locale = Locale(identifier: "en_US")
     }
     
     var date: Date? {
@@ -40,7 +39,7 @@ class WRColumnHeader: UICollectionReusableView {
                     case 6:
                         dayLbl.textColor = UIColor(hexString: "3573ff")
                     default:
-                        dayLbl.textColor = UIColor(hexString: "aaaaaa")
+                        dayLbl.textColor = UIColor(hexString: "F2F2F2")
                     }
                     backgroundColor = UIColor.clear//UIColor.white
                 }
