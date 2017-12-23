@@ -9,13 +9,13 @@
 Pod::Spec.new do |s|
 
   s.name         = "WRCalendarFortvOS"
-  s.version      = "0.1.5"
+  s.version      = "0.1.6"
   s.summary      = "calendar for tvOS"
   s.description  = "WRCalendarFortvOS is based on WRCalendar" 
   s.homepage     = "https://github.com/sorashido/WRCalendarFortvOS"
   s.license      = "MIT"
   s.author             = { "shido" => "poporotylm@gmail.com" }
-  s.source       = { :git => "https://github.com/sorashido/WRCalendarFortvOS.git", :tag => "v0.1.5" }
+  s.source       = { :git => "https://github.com/sorashido/WRCalendarFortvOS.git", :tag => "v0.1.6" }
   s.source_files  = "WRCalendarFortvOS/**/*"
 	s.platforms = { :tvos => "11.0"}
   s.resource_bundles = {
