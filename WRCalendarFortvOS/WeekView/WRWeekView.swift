@@ -15,7 +15,7 @@ public protocol WRWeekViewDelegate: NSObjectProtocol  {
 }
 
 public class WRWeekView: UIView {
-    let pageCount = 2
+    let pageCount = 1
     let dateFormatter = DateFormatter()
     
     var collectionView: UICollectionView!
