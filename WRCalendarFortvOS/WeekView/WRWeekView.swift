@@ -15,7 +15,7 @@ public protocol WRWeekViewDelegate: NSObjectProtocol  {
 }
 
 public class WRWeekView: UIView {
-    let pageCount = 1
+    let pageCount = 2
     let dateFormatter = DateFormatter()
     
     var collectionView: UICollectionView!
@@ -218,7 +218,8 @@ public class WRWeekView: UIView {
         switch calendarType {
         case .week:
             daysToShowOnScreen = 7
-            let weekComponent = Calendar.current.dateComponents([.yearForWeekOfYear, .weekOfYear], from: calendarDate)
+            var weekComponent = Calendar.current.dateComponents([.yearForWeekOfYear, .weekOfYear], from: calendarDate)
+            weekComponent.day = calendarDate.day - 3
             startDate = Calendar.current.date(from: weekComponent)
         case .day:
             daysToShowOnScreen = 1
