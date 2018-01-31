@@ -27,8 +27,8 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
     
     var minuteHeight: CGFloat { return hourHeight / 60 }
 
-    var startTime = 7
-    var endTime = 20
+    let startTime = 7
+    let endTime = 20
 
     let displayHeaderBackgroundAtOrigin = true
     let gridThickness: CGFloat = UIScreen.main.scale == 1 ? 0.5 : 1.0

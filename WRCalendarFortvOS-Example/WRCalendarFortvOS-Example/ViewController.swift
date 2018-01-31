@@ -18,8 +18,8 @@ class MainCont: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         setupCalendarData()
 
-        let startDateArray:[String] = ["2017-12-18T10:00:00+09:00", "2017-12-19T08:50:00+09:00", "2017-12-20T10:30:00+09:00", "2017-12-21", "2017-12-21T13:30:00+09:00", "2017-12-20T13:30:00+09:00", "2017-12-22", "2017-12-23"]
-        let endDateArray: [String] = ["2017-12-18T15:00:00+09:00", "2017-12-19T12:00:00+09:00", "2017-12-20T12:00:00+09:00", "2017-12-27", "2017-12-21T14:30:00+09:00", "2017-12-20T16:00:00+09:00", "2017-12-23", "2017-12-23"]
+        let startDateArray:[String] = ["2018-1-31T10:00:00+09:00", "2018-1-31T08:50:00+09:00", "2018-1-31T10:30:00+09:00", "2018-2-1", "2018-2-1T13:30:00+09:00", "2018-2-1T13:30:00+09:00", "2018-2-1", "2018-2-1"]
+        let endDateArray: [String] = ["2018-1-31T15:00:00+09:00", "2018-1-31T12:00:00+09:00", "2018-1-31T12:00:00+09:00", "2018-2-1", "2018-2-1T14:30:00+09:00", "2018-2-1T16:00:00+09:00", "2018-2-1", "2018-2-1"]
         let bodyArray: [String] = ["xx", "yyy", "zzz", "ttt", "mmm", "sample", "sample2", "天皇誕生日"]
         let organizerArray: [String] = ["a", "a", "b", "c", "c", "c", "d", "d", "e"]
         
@@ -41,17 +41,16 @@ class MainCont: UIViewController {
     func setupCalendarData() {
         weekView.setUIParams(hourHeight: 60, rowHeaderWidth: 60, columnHeaderHeight: 50, sectionWidth: 10, hourGridDivisionValue: .minutes_20)
         weekView.setMargin(margin: UIEdgeInsets(top: -400, left: 0, bottom: 0, right: 0))
-        weekView.setTime(startTime: 7, endTime: 20)
         weekView.setCalendarDate(Date())
         weekView.delegate = self
     }
     
     func getColorFromCalendarName(name: String) ->UIColor {
-        let dict = ["a": UIColor(hex: "E40008").withAlphaComponent(0.3),
-                 "b": UIColor(hex: "FF4E28").withAlphaComponent(0.3),
-                 "c": UIColor(hex: "00AC32").withAlphaComponent(0.3),
-                 "d": UIColor(hex: "A546AF").withAlphaComponent(0.3),
-                 "e": UIColor(hex: "D77521").withAlphaComponent(0.3),
+        let dict = ["a": UIColor(hex: "E40008").withAlphaComponent(0.4),
+                 "b": UIColor(hex: "FF4E28").withAlphaComponent(0.4),
+                 "c": UIColor(hex: "00AC32").withAlphaComponent(0.4),
+                 "d": UIColor(hex: "A546AF").withAlphaComponent(0.4),
+                 "e": UIColor(hex: "D77521").withAlphaComponent(0.4),
                  ]
 
         if let color = dict[name]{

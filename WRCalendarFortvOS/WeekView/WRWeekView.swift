@@ -117,10 +117,10 @@ public class WRWeekView: UIView {
         flowLayout.sectionWidth = (frame.width - flowLayout.rowHeaderWidth) / CGFloat(daysToShowOnScreen)
     }
     
-    public func setTime(startTime: Int, endTime: Int){
-        flowLayout.startTime = startTime
-        flowLayout.endTime = endTime
-    }
+//    public func setTime(startTime: Int, endTime: Int){
+//        flowLayout.startTime = startTime
+//        flowLayout.endTime = endTime
+//    }
     
     public func setUIParams(hourHeight:CGFloat=50, rowHeaderWidth:CGFloat=45, columnHeaderHeight: CGFloat=55, sectionWidth: CGFloat=0, hourGridDivisionValue:HourGridDivision = .minutes_30){
         flowLayout.hourHeight = hourHeight
