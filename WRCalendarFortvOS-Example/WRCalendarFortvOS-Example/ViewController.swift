@@ -41,6 +41,7 @@ class MainCont: UIViewController {
     func setupCalendarData() {
         weekView.setUIParams(hourHeight: 60, rowHeaderWidth: 60, columnHeaderHeight: 50, sectionWidth: 10, hourGridDivisionValue: .minutes_20)
         weekView.setMargin(margin: UIEdgeInsets(top: -400, left: 0, bottom: 0, right: 0))
+        print(Date())
         weekView.setCalendarDate(Date())
         weekView.delegate = self
     }
@@ -56,7 +57,7 @@ class MainCont: UIViewController {
         if let color = dict[name]{
             return color
         }else{
-            return UIColor.blue.withAlphaComponent(0.3)
+            return UIColor.blue.withAlphaComponent(0.4)
         }
     }
 }
