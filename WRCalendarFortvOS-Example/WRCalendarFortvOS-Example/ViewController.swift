@@ -8,6 +8,9 @@
 
 import UIKit
 import WRCalendarFortvOS
+import SwiftyJSON
+
+var calendarDate: JSON = JSON.init()
 
 class MainCont: UIViewController {
 
@@ -22,15 +25,26 @@ class MainCont: UIViewController {
         let endDateArray: [String] = ["2018-1-31T15:00:00+09:00", "2018-1-31T12:00:00+09:00", "2018-1-31T12:00:00+09:00", "2018-2-1", "2018-2-1T14:30:00+09:00", "2018-2-1T16:00:00+09:00", "2018-2-1", "2018-2-1"]
         let bodyArray: [String] = ["xx", "yyy", "zzz", "ttt", "mmm", "sample", "sample2", "天皇誕生日"]
         let organizerArray: [String] = ["a", "a", "b", "c", "c", "c", "d", "d", "e"]
+                weekView.add1DayEvent(start: startDateArray[3], end: endDateArray[3], title: bodyArray[3], color: getColorFromCalendarName(name: organizerArray[3]))
+                weekView.add1DayEvent(start: startDateArray[6], end: endDateArray[6], title: bodyArray[6], color: getColorFromCalendarName(name: organizerArray[6]))
+                weekView.add1DayEvent(start: startDateArray[7], end: endDateArray[7], title: bodyArray[7], color: getColorFromCalendarName(name: organizerArray[7]))
         
-        //add events
-        weekView.add1DayEvent(start: startDateArray[3], end: endDateArray[3], title: bodyArray[3], color: getColorFromCalendarName(name: organizerArray[3]))
-        weekView.add1DayEvent(start: startDateArray[6], end: endDateArray[6], title: bodyArray[6], color: getColorFromCalendarName(name: organizerArray[6]))
-        weekView.add1DayEvent(start: startDateArray[7], end: endDateArray[7], title: bodyArray[7], color: getColorFromCalendarName(name: organizerArray[7]))
-        
-        for i in 0..<8{
-            weekView.addEvent(event: WREvent.make(start: startDateArray[i], end: endDateArray[i], title: bodyArray[i], color: getColorFromCalendarName(name: organizerArray[i])))
-        }
+                for i in 0..<8{
+                    weekView.addEvent(event: WREvent.make(start: startDateArray[i], end: endDateArray[i], title: bodyArray[i], color: getColorFromCalendarName(name: organizerArray[i])))
+                }
+//        let jsonData = NSData(contentsOfFile: "output.json")
+//        calendarDate = JSON(jsonData)
+//
+//        //add events
+//        calendarDate.forEach{( _, data) in
+//            if data["start"]["date"].stringValue.isEmpty {
+//                self.weekView.addEvent(event: WREvent.make(start: data["start"]["dateTime"].stringValue, end: data["end"]["dateTime"].stringValue, title: data["summary"].stringValue, color: getColorFromCalendarName(name: data["organizer"]["displayName"].stringValue)))
+//            } else {
+//                self.weekView.add1DayEvent(start: data["start"]["date"].stringValue, end: data["end"]["date"].stringValue, title: data["summary"].stringValue, color: getColorFromCalendarName(name: data["organizer"]["displayName"].stringValue))
+//                    calendarDate = []
+//                print("updatecalendr")
+//            }
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +53,7 @@ class MainCont: UIViewController {
     }
 
     func setupCalendarData() {
-        weekView.setUIParams(hourHeight: 60, rowHeaderWidth: 60, columnHeaderHeight: 50, sectionWidth: 10, hourGridDivisionValue: .minutes_20)
+        weekView.setUIParams(hourHeight: 60, rowHeaderWidth: 60, columnHeaderHeight: 50, sectionWidth: 10, hourGridDivisionValue: .minutes_30)
         weekView.setMargin(margin: UIEdgeInsets(top: -400, left: 0, bottom: 0, right: 0))
         print(Date())
         weekView.setCalendarDate(Date())
@@ -47,17 +61,20 @@ class MainCont: UIViewController {
     }
     
     func getColorFromCalendarName(name: String) ->UIColor {
-        let dict = ["a": UIColor(hex: "E40008").withAlphaComponent(0.4),
-                 "b": UIColor(hex: "FF4E28").withAlphaComponent(0.4),
-                 "c": UIColor(hex: "00AC32").withAlphaComponent(0.4),
-                 "d": UIColor(hex: "A546AF").withAlphaComponent(0.4),
-                 "e": UIColor(hex: "D77521").withAlphaComponent(0.4),
-                 ]
-
+        let dict = ["伊藤研究室共用": UIColor(hex: "E40008").withAlphaComponent(0.4),
+                    "伊藤先生（会議予定）": UIColor(hex: "00AC32").withAlphaComponent(0.4),
+                    "伊藤孝行研究室": UIColor(hex: "A546AF").withAlphaComponent(0.4),
+                    "伊藤研就活カレンダー": UIColor(hex: "D77521").withAlphaComponent(0.4),
+                    "伊藤研究室会議室情報": UIColor(hex: "0085C2").withAlphaComponent(0.4),
+                    "会議情報": UIColor(hex: "FFBD44").withAlphaComponent(0.4),
+                    "新人研修2018": UIColor(hex: "A069A8").withAlphaComponent(0.4),
+                    "Takayuki Ito": UIColor(hex: "7CB341").withAlphaComponent(0.4),
+                    "日本の祝日": UIColor(hex: "F27B74").withAlphaComponent(0.4)]
+        
         if let color = dict[name]{
             return color
         }else{
-            return UIColor.blue.withAlphaComponent(0.4)
+            return UIColor.blue.withAlphaComponent(0.3)
         }
     }
 }

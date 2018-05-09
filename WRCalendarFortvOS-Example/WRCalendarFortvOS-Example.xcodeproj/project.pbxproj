@@ -97,7 +97,6 @@
 				BF32F8B01FE65B39006EECD3 /* Frameworks */,
 				BF32F8B11FE65B39006EECD3 /* Resources */,
 				3A4E5B12B2B9217ADF66FB44 /* [CP] Embed Pods Frameworks */,
-				AD642CDCF3FB4EBC9613D436 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,34 +180,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/WRCalendarFortvOS/WRCalendarFortvOS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WRCalendarFortvOS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD642CDCF3FB4EBC9613D436 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/WRCalendarFortvOS/WRCalendarViewFortvOS.bundle,
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WRCalendarFortvOS-Example/Pods-WRCalendarFortvOS-Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

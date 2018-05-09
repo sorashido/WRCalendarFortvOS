@@ -221,7 +221,6 @@
 				BF32F7D51FE622A9006EECD3 /* Frameworks */,
 				BF32F7D61FE622A9006EECD3 /* Headers */,
 				BF32F7D71FE622A9006EECD3 /* Resources */,
-				3DA1DE416949F96E54ABA649 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,21 +279,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3DA1DE416949F96E54ABA649 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WRCalendarFortvOS/Pods-WRCalendarFortvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8ECA2E494942E6763879922C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

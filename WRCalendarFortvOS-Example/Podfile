@@ -7,5 +7,6 @@ target 'WRCalendarFortvOS-Example' do
 
   # Pods for WRCalendarFortvOS-Example
   pod 'WRCalendarFortvOS', :path=> '../'
+  pod 'SwiftyJSON'
 
 end
