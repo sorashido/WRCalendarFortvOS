@@ -31,7 +31,7 @@ class WRColumnHeader: UICollectionReusableView {
 
                 if date.isSameDay(date: Date()) {
                     dayLbl.textColor = UIColor(hexString: "FBCD47")
-                    backgroundColor = UIColor.clear//UIColor(hexString: "f5f8fd")
+                    backgroundColor = UIColor(hexString: "f5f8fd")?.withAlphaComponent(0.4)
                 } else {
                     switch weekday {
                     case 0: // sunday

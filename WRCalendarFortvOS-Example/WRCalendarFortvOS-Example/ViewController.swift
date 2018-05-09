@@ -21,30 +21,30 @@ class MainCont: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         setupCalendarData()
 
-        let startDateArray:[String] = ["2018-1-31T10:00:00+09:00", "2018-1-31T08:50:00+09:00", "2018-1-31T10:30:00+09:00", "2018-2-1", "2018-2-1T13:30:00+09:00", "2018-2-1T13:30:00+09:00", "2018-2-1", "2018-2-1"]
-        let endDateArray: [String] = ["2018-1-31T15:00:00+09:00", "2018-1-31T12:00:00+09:00", "2018-1-31T12:00:00+09:00", "2018-2-1", "2018-2-1T14:30:00+09:00", "2018-2-1T16:00:00+09:00", "2018-2-1", "2018-2-1"]
-        let bodyArray: [String] = ["xx", "yyy", "zzz", "ttt", "mmm", "sample", "sample2", "天皇誕生日"]
-        let organizerArray: [String] = ["a", "a", "b", "c", "c", "c", "d", "d", "e"]
-                weekView.add1DayEvent(start: startDateArray[3], end: endDateArray[3], title: bodyArray[3], color: getColorFromCalendarName(name: organizerArray[3]))
-                weekView.add1DayEvent(start: startDateArray[6], end: endDateArray[6], title: bodyArray[6], color: getColorFromCalendarName(name: organizerArray[6]))
-                weekView.add1DayEvent(start: startDateArray[7], end: endDateArray[7], title: bodyArray[7], color: getColorFromCalendarName(name: organizerArray[7]))
-        
-                for i in 0..<8{
-                    weekView.addEvent(event: WREvent.make(start: startDateArray[i], end: endDateArray[i], title: bodyArray[i], color: getColorFromCalendarName(name: organizerArray[i])))
-                }
-//        let jsonData = NSData(contentsOfFile: "output.json")
-//        calendarDate = JSON(jsonData)
+//        let startDateArray:[String] = ["2018-1-31T10:00:00+09:00", "2018-1-31T08:50:00+09:00", "2018-1-31T10:30:00+09:00", "2018-2-1", "2018-2-1T13:30:00+09:00", "2018-2-1T13:30:00+09:00", "2018-2-1", "2018-2-1"]
+//        let endDateArray: [String] = ["2018-1-31T15:00:00+09:00", "2018-1-31T12:00:00+09:00", "2018-1-31T12:00:00+09:00", "2018-2-1", "2018-2-1T14:30:00+09:00", "2018-2-1T16:00:00+09:00", "2018-2-1", "2018-2-1"]
+//        let bodyArray: [String] = ["xx", "yyy", "zzz", "ttt", "mmm", "sample", "sample2", "天皇誕生日"]
+//        let organizerArray: [String] = ["a", "a", "b", "c", "c", "c", "d", "d", "e"]
+//                weekView.add1DayEvent(start: startDateArray[3], end: endDateArray[3], title: bodyArray[3], color: getColorFromCalendarName(name: organizerArray[3]))
+//                weekView.add1DayEvent(start: startDateArray[6], end: endDateArray[6], title: bodyArray[6], color: getColorFromCalendarName(name: organizerArray[6]))
+//                weekView.add1DayEvent(start: startDateArray[7], end: endDateArray[7], title: bodyArray[7], color: getColorFromCalendarName(name: organizerArray[7]))
 //
-//        //add events
-//        calendarDate.forEach{( _, data) in
-//            if data["start"]["date"].stringValue.isEmpty {
-//                self.weekView.addEvent(event: WREvent.make(start: data["start"]["dateTime"].stringValue, end: data["end"]["dateTime"].stringValue, title: data["summary"].stringValue, color: getColorFromCalendarName(name: data["organizer"]["displayName"].stringValue)))
-//            } else {
-//                self.weekView.add1DayEvent(start: data["start"]["date"].stringValue, end: data["end"]["date"].stringValue, title: data["summary"].stringValue, color: getColorFromCalendarName(name: data["organizer"]["displayName"].stringValue))
-//                    calendarDate = []
-//                print("updatecalendr")
-//            }
-//        }
+//                for i in 0..<8{
+//                    weekView.addEvent(event: WREvent.make(start: startDateArray[i], end: endDateArray[i], title: bodyArray[i], color: getColorFromCalendarName(name: organizerArray[i])))
+//                }
+        let jsonData = NSData(contentsOfFile: "/Users/tela/dev/src/gitlab.itolab.nitech.ac.jp/shiba/lambdacalendar/v2/output.json")
+        calendarDate = JSON(jsonData)
+
+        //add events
+        calendarDate.forEach{( _, data) in
+            if data["start"]["date"].stringValue.isEmpty {
+                self.weekView.addEvent(event: WREvent.make(start: data["start"]["dateTime"].stringValue, end: data["end"]["dateTime"].stringValue, title: data["summary"].stringValue, color: getColorFromCalendarName(name: data["organizer"]["displayName"].stringValue)))
+            } else {
+                self.weekView.add1DayEvent(start: data["start"]["date"].stringValue, end: data["end"]["date"].stringValue, title: data["summary"].stringValue, color: getColorFromCalendarName(name: data["organizer"]["displayName"].stringValue))
+                    calendarDate = []
+                print("updatecalendr")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
