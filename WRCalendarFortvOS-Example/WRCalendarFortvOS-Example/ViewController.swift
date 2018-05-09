@@ -32,7 +32,7 @@ class MainCont: UIViewController {
 //                for i in 0..<8{
 //                    weekView.addEvent(event: WREvent.make(start: startDateArray[i], end: endDateArray[i], title: bodyArray[i], color: getColorFromCalendarName(name: organizerArray[i])))
 //                }
-        let jsonData = NSData(contentsOfFile: "/Users/tela/dev/src/gitlab.itolab.nitech.ac.jp/shiba/lambdacalendar/v2/output.json")
+        let jsonData = NSData(contentsOfFile: "calendar.json")
         calendarDate = JSON(jsonData)
 
         //add events
