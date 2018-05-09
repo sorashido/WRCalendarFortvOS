@@ -49,14 +49,14 @@ class MainCont: UIViewController {
     
     func getColorFromCalendarName(name: String) ->UIColor {
         let dict = ["a": UIColor(hex: "E40008").withAlphaComponent(0.4),
-                    "a": UIColor(hex: "00AC32").withAlphaComponent(0.4),
-                    "b": UIColor(hex: "A546AF").withAlphaComponent(0.4),
-                    "b": UIColor(hex: "D77521").withAlphaComponent(0.4),
-                    "c": UIColor(hex: "0085C2").withAlphaComponent(0.4),
-                    "d": UIColor(hex: "FFBD44").withAlphaComponent(0.4),
-                    "e": UIColor(hex: "A069A8").withAlphaComponent(0.4),
-                    "e": UIColor(hex: "7CB341").withAlphaComponent(0.4),
-                    "e": UIColor(hex: "F27B74").withAlphaComponent(0.4)]
+                    "b": UIColor(hex: "00AC32").withAlphaComponent(0.4),
+                    "c": UIColor(hex: "A546AF").withAlphaComponent(0.4),
+                    "d": UIColor(hex: "D77521").withAlphaComponent(0.4),
+                    "e": UIColor(hex: "0085C2").withAlphaComponent(0.4),
+                    "f": UIColor(hex: "FFBD44").withAlphaComponent(0.4),
+                    "g": UIColor(hex: "A069A8").withAlphaComponent(0.4),
+                    "h": UIColor(hex: "7CB341").withAlphaComponent(0.4),
+                    "i": UIColor(hex: "F27B74").withAlphaComponent(0.4)]
         
         if let color = dict[name]{
             return color
